@@ -4,6 +4,7 @@ CREATE TABLE `m_metting`  (
   `begin_time` datetime(0)  COMMENT '会议开始时间',
   `end_time` datetime(0)  COMMENT '会议结束时间',
   `qr_code` varchar(200)  COMMENT '会议名称',
+  `sdelete` varchar(1) DEFAULT 0 NULL COMMENT '是否删除',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 

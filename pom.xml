@@ -134,6 +134,17 @@
             <artifactId>UserAgentUtils</artifactId>
             <version>1.20</version>
         </dependency>
+        <!--二维码图片-->
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>core</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.zxing</groupId>
+            <artifactId>javase</artifactId>
+            <version>3.1.0</version>
+        </dependency>
     </dependencies>
 
     <build>
