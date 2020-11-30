@@ -52,7 +52,17 @@ public interface UserService {
      * @return
      */
     PageVO<UserVO> findUserList(Integer pageNum,Integer pageSize,UserVO userVO);
-
+    /**
+     * 用户列表
+     * @return
+     */
+    List<User> findUserList();
+    /**
+     * 未加入会议的用户列表
+     *  @param id
+     * @return
+     */
+    List<User> findNotInGroupUserList(Long id);
     /**
      * 删除用户
      *

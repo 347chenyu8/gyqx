@@ -1,5 +1,11 @@
 package com.coderman.api.common.pojo.metting;
 
+import lombok.Data;
+
+import javax.persistence.Table;
+
+@Data
+@Table(name = "m_user_group")
 public class UserGroup {
     private Long id;
 
@@ -7,27 +13,5 @@ public class UserGroup {
 
     private Long groupid;
 
-    public Long getId() {
-        return id;
-    }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getUserid() {
-        return userid;
-    }
-
-    public void setUserid(Long userid) {
-        this.userid = userid;
-    }
-
-    public Long getGroupid() {
-        return groupid;
-    }
-
-    public void setGroupid(Long groupid) {
-        this.groupid = groupid;
-    }
 }

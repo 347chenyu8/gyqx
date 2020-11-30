@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.api.metting.mapper.CheckMapper">
+
+  <select id="getCheckByMettingID" resultType="com.coderman.api.system.vo.CheckVo"  parameterType="Long">
+    select ug.*,u.username as name  from m_check ug left join  tb_user u ON ug.userid=u.id where ug.mettingid = #{id}
+  </select>
+
+
+</mapper>

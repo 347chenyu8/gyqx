@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.api.system.mapper.UserMapper">
+
+  <select id="findNotGroupUser" resultType="com.coderman.api.common.pojo.system.User"
+          parameterType="Long">
+    select * from tb_user where id not in (select userid from m_user_group where groupid != #{id})
+  </select>
+
+</mapper>

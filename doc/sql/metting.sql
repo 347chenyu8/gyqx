@@ -5,6 +5,7 @@ CREATE TABLE `m_metting`  (
   `end_time` datetime(0)  COMMENT '会议结束时间',
   `qr_code` varchar(200)  COMMENT '会议名称',
   `sdelete` varchar(1) DEFAULT 0 NULL COMMENT '是否删除',
+  `create_time` datetime(0) NULL COMMENT '创建时间',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
@@ -12,6 +13,8 @@ CREATE TABLE `m_group`  (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(50)  COMMENT '分组名称',
   `remake` varchar(200)  COMMENT '分组简介',
+  `sdelete` varchar(1) DEFAULT 0 NULL COMMENT '是否删除',
+  `create_time` datetime(0) NULL COMMENT '创建时间',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
 
@@ -39,6 +42,7 @@ CREATE TABLE `m_check`  (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `mettingid` bigint(20)  COMMENT '会议ID',
   `userid` bigint(20)  COMMENT '用户ID',
-  `check` datetime(0)  COMMENT '签到时间',
+  `checkTime` datetime(0)  COMMENT '签到时间',
+  `groupid` bigint(20)  COMMENT '会议分组',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;

@@ -1,4 +1,4 @@
-package com.coderman.api.common.pojo.metting;
+package com.coderman.api.system.vo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
@@ -8,9 +8,7 @@ import javax.persistence.Table;
 import java.util.Date;
 
 @Data
-@Table(name = "m_check")
-public class Check {
-    @Id
+public class CheckVo {
     private Long id;
 
     private Long mettingid;
@@ -19,8 +17,7 @@ public class Check {
 
     private Long groupid;
 
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date checkTime;
 
-
+    private String name;
 }

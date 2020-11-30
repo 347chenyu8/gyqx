@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.api.metting.mapper.UserGroupMapper">
+
+  <select id="findGroupUser" resultType="com.coderman.api.system.vo.UserGroupVO">
+    select u.id,u.username,ug.groupid as groupid from m_user_group ug left join  tb_user u ON ug.userid=u.id
+  </select>
+
+
+</mapper>

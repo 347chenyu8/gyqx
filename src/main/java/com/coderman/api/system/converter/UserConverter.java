@@ -1,8 +1,10 @@
 package com.coderman.api.system.converter;
 
+import com.coderman.api.common.pojo.system.Role;
 import com.coderman.api.system.mapper.DepartmentMapper;
 import com.coderman.api.common.pojo.system.Department;
 import com.coderman.api.common.pojo.system.User;
+import com.coderman.api.system.vo.RoleTransferItemVO;
 import com.coderman.api.system.vo.UserVO;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,5 +58,24 @@ public class UserConverter {
         return userVO;
     }
 
+    /**
+     * 转成前端需要的角色Item
+     * @param users
+     * @return
+     */
+    public static List<RoleTransferItemVO> converterToUserTransferItem(List<User> users) {
+        List<RoleTransferItemVO> itemVOList=new ArrayList<>();
+        if(!CollectionUtils.isEmpty(users)){
+            for (User user : users) {
+                RoleTransferItemVO item = new RoleTransferItemVO();
+                item.setLabel(user.getUsername());
+                item.setDisabled(user.getStatus()==0);
+                item.setKey(user.getId());
+                itemVOList.add(item);
+            }
+        }
+
+        return itemVOList;
+    }
 
 }

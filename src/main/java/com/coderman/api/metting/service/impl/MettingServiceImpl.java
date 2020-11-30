@@ -1,5 +1,6 @@
 package com.coderman.api.metting.service.impl;
 
+import com.coderman.api.common.pojo.metting.Group;
 import com.coderman.api.common.pojo.metting.Metting;
 import com.coderman.api.metting.mapper.MettingMapper;
 import com.coderman.api.metting.service.MettingService;
@@ -50,7 +51,7 @@ public class MettingServiceImpl implements MettingService {
             metting.setCreate_time(new Date());
             mettingMapper.insert(metting);
         }else{
-            mettingMapper.updateByPrimaryKey(metting);
+            mettingMapper.updateByPrimaryKeySelective(metting);
         }
 
     }
@@ -61,7 +62,18 @@ public class MettingServiceImpl implements MettingService {
         metting.setId(id);
         metting.setIsdelete("1");
 
-        mettingMapper.updateByPrimaryKey(metting);
+        mettingMapper.updateByPrimaryKeySelective(metting);
     }
+    /**
+     * 查找会议
+     * @param id
+     */
+    @Override
+    public Metting findMettingByid( Long id){
+        Metting group = new Metting();
+        group.setId(id);
+        return  mettingMapper.selectByPrimaryKey(group);
+    }
+
 
 }

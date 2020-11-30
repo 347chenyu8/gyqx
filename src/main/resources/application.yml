@@ -45,3 +45,6 @@ fdfs:
     max-total: 500
     max-wait-millis: 2000
 
+
+vue:
+  MettingChick: http://192.168.0.196:8080/metting/check

@@ -1,6 +1,7 @@
 package com.coderman.api.metting.controller;
 
 import com.coderman.api.common.bean.ResponseBean;
+import com.coderman.api.common.pojo.metting.Group;
 import com.coderman.api.common.pojo.metting.Metting;
 import com.coderman.api.common.utils.QRCodeUtils;
 import com.coderman.api.metting.service.MettingService;
@@ -12,6 +13,7 @@ import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.util.StringUtils;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -32,6 +34,8 @@ import java.util.List;
 @RequestMapping("/metting")
 public class MettingController {
 
+    @Value("${vue.MettingChick}")
+    private String VueURL;
 
     @Autowired
     private MettingService mettingService;
@@ -68,9 +72,15 @@ public class MettingController {
     @GetMapping("/getQRCode/{id}")
     public void getQRCode(@PathVariable Long id,HttpServletResponse response) {
         try {
-            QRCodeUtils.encode("string",response.getOutputStream());
+            String content = VueURL+"?id="+id;
+            QRCodeUtils.encode(content,response.getOutputStream());
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    @GetMapping("/edit/{id}")
+    public ResponseBean  findMettingByID(@PathVariable Long id){
+        Metting metting = mettingService.findMettingByid(id);
+        return ResponseBean.success(metting);
     }
 }

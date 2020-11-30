@@ -1,33 +1,25 @@
 package com.coderman.api.common.pojo.metting;
 
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Data;
+
+import javax.persistence.Id;
+import javax.persistence.Table;
+import java.util.Date;
+
+@Data
+@Table(name = "m_group")
 public class Group {
+    @Id
     private Long id;
 
     private String name;
 
     private String remake;
 
-    public Long getId() {
-        return id;
-    }
+    private String isdelete;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name == null ? null : name.trim();
-    }
-
-    public String getRemake() {
-        return remake;
-    }
-
-    public void setRemake(String remake) {
-        this.remake = remake == null ? null : remake.trim();
-    }
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private Date create_time;
 }

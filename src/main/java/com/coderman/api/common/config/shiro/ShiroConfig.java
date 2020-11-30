@@ -66,6 +66,9 @@ public class ShiroConfig {
         filterRuleMap.put("/druid/**","anon");
         //会议相关
         filterRuleMap.put("/metting/getQRCode/*", "anon");
+        filterRuleMap.put("/mettingGroup/getAllGroup", "anon");
+        filterRuleMap.put("/mettingGroup/getAllGroupUser", "anon");
+        filterRuleMap.put("/check/check", "anon");
         factoryBean.setFilterChainDefinitionMap(filterRuleMap);
         return factoryBean;
     }

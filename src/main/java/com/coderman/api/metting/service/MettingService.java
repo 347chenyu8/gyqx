@@ -1,9 +1,11 @@
 package com.coderman.api.metting.service;
 
+import com.coderman.api.common.pojo.metting.Group;
 import com.coderman.api.common.pojo.metting.Metting;
 import com.coderman.api.system.vo.LogVO;
 import com.coderman.api.system.vo.PageVO;
 
+import java.util.List;
 
 
 public interface MettingService {
@@ -27,5 +29,10 @@ public interface MettingService {
      * @param id
      */
     void delete( Long id);
+    /**
+     * 查找会议
+     * @param id
+     */
+    Metting findMettingByid( Long id);
 
 }

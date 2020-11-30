@@ -163,6 +163,25 @@ public class UserServiceImpl implements UserService {
         return MenuTreeBuilder.build(menuNodeVOS);
     }
 
+
+    /**
+     * 用户列表
+     * @return
+     */
+    @Override
+    public List<User> findUserList(){
+        List<User> userList = userMapper.selectAll();
+        return  userList;
+    }
+    /**
+     * 未加入会议的用户列表
+     * @return
+     */
+    @Override
+    public List<User> findNotInGroupUserList(Long id){
+        List<User> userList = userMapper.findNotGroupUser(id);
+        return  userList;
+    }
     /**
      * 用户列表
      * @param userVO
