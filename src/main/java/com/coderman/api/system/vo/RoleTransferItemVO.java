@@ -3,7 +3,7 @@ package com.coderman.api.system.vo;
 import lombok.Data;
 
 /**
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/3/9 20:48
  * @Version 1.0
  **/

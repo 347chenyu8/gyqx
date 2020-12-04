@@ -6,7 +6,7 @@ import org.aspectj.lang.reflect.MethodSignature;
 import java.lang.reflect.Method;
 
 /**
- * @author zhangyukang
+ * @author chenyu
  */
 public abstract class AspectSupport {
 

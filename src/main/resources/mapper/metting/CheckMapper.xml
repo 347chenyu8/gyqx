@@ -3,7 +3,7 @@
 <mapper namespace="com.coderman.api.metting.mapper.CheckMapper">
 
   <select id="getCheckByMettingID" resultType="com.coderman.api.system.vo.CheckVo"  parameterType="Long">
-    select ug.*,u.username as name  from m_check ug left join  tb_user u ON ug.userid=u.id where ug.mettingid = #{id}
+    select ug.*,u.username as name,g.name as gname  from m_check ug left join  tb_user u ON ug.userid=u.id left join  m_group g ON ug.groupid=g.id where ug.mettingid = #{id} group by ug.userid order by ug.check_time desc
   </select>
 
 

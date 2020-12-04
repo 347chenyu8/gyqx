@@ -7,7 +7,7 @@ import lombok.Getter;
  * 业务错误码：返回结果的状态码
  *
  * 如果想要代码更具维护性一点,可以定义不同种类的错误码,都实现 BaseCodeInterface
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/3/1 14:51
  * @Version 1.0
  **/

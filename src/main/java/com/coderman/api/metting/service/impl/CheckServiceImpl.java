@@ -15,12 +15,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
- * @Author zhangyukang
- * @Date 2020/4/2 20:24
+ * @Author chenyu
+ * @Date 2020/12/2 20:24
  * @Version 1.0
  **/
 @Service
@@ -41,6 +40,9 @@ public class CheckServiceImpl implements CheckService {
 
     @Override
     public List<CheckVo> getCheckByMettingID(long id){
-        return  checkMapper.getCheckByMettingID(id);
+        List<CheckVo> checkRecord = checkMapper.getCheckByMettingID(id);
+//        Set<CheckVo> checkRecordSet = new HashSet<>(checkRecord);
+//        List<CheckVo> checkRecordList = new ArrayList<>(checkRecordSet);
+        return  checkRecord;
     }
 }

@@ -18,7 +18,7 @@ import java.util.List;
 /**
  * 物资分类管理
  *
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/3/16 17:16
  * @Version 1.0
  **/

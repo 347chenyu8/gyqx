@@ -4,7 +4,7 @@ import com.coderman.api.common.pojo.biz.Supplier;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/3/16 20:21
  * @Version 1.0
  **/

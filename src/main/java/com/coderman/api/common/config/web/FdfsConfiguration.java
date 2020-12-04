@@ -5,7 +5,7 @@ import org.springframework.context.annotation.EnableMBeanExport;
 import org.springframework.jmx.support.RegistrationPolicy;
 
 /**
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/8/9 11:49
  * @Version 1.0
  **/

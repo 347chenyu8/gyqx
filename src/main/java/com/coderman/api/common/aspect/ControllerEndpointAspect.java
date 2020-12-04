@@ -27,7 +27,7 @@ import java.util.Date;
 
 /**
  * 系统日志切面
- * @author zhangyukang
+ * @author chenyu
  */
 @Slf4j
 @Aspect

@@ -5,7 +5,7 @@ import com.coderman.api.biz.vo.OutStockVO;
 import com.coderman.api.system.vo.PageVO;
 
 /**
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/5/10 14:26
  * @Version 1.0
  **/

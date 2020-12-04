@@ -2,7 +2,7 @@ package com.coderman.api.biz.enums;
 
 /**
  * 业务用户类型
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/3/15 18:37
  * @Version 1.0
  **/

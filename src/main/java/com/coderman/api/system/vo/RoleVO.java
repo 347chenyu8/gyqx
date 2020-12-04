@@ -7,7 +7,7 @@ import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 /**
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/3/9 16:22
  * @Version 1.0
  **/

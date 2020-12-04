@@ -3,8 +3,8 @@ package com.coderman.api.biz.vo;
 import lombok.Data;
 
 /** 商品库存
- * @Author zhangyukang
- * @Date 2020/4/16 09:27
+ * @Author chenyu
+ * @Date 2020/12/16 09:27
  * @Version 1.0
  **/
 @Data

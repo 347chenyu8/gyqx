@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 /**
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/8/9 11:48
  * @Version 1.0
  **/

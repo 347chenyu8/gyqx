@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * 出库单
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/5/10 14:23
  * @Version 1.0
  **/

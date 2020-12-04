@@ -3,7 +3,7 @@ package com.coderman.api.common.utils;
 import org.apache.shiro.crypto.hash.SimpleHash;
 
 /**
- * @Author zhangyukang
+ * @Author chenyu
  * @Date 2020/3/1 12:33
  * @Version 1.0
  **/
