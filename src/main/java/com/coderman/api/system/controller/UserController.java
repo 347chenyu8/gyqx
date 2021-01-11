@@ -9,7 +9,6 @@ import com.coderman.api.system.service.LoginLogService;
 import com.coderman.api.system.service.RoleService;
 import com.coderman.api.system.service.UserService;
 import com.coderman.api.system.vo.*;
-import com.wuwenze.poi.ExcelKit;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authz.annotation.RequiresAuthentication;
@@ -222,7 +221,7 @@ public class UserController {
     @ControllerEndpoint(exceptionMessage = "导出Excel失败",operation = "导出用户excel")
     public void export(HttpServletResponse response) {
         List<User> users = this.userService.findAll();
-        ExcelKit.$Export(User.class, response).downXlsx(users, false);
+//        ExcelKit.$Export(User.class, response).downXlsx(users, false);
     }
 
 }

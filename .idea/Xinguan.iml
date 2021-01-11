@@ -164,5 +164,26 @@
     <orderEntry type="library" name="Maven: eu.bitwalker:UserAgentUtils:1.20" level="project" />
     <orderEntry type="library" name="Maven: com.google.zxing:core:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: com.google.zxing:javase:3.1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpmime:4.3.5" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.taobao.top:top-api-sdk-dev:ding-open-mc-SNAPSHOT">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/taobao-sdk-java-auto_1479188381469-20210106.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Maven: com.taobao.top:lippi-oapi-encrpt:dingtalk-SNAPSHOT">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/lippi-oapi-encrpt.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

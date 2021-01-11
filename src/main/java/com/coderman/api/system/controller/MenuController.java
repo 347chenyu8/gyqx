@@ -6,7 +6,6 @@ import com.coderman.api.common.pojo.system.Menu;
 import com.coderman.api.system.service.MenuService;
 import com.coderman.api.system.vo.MenuNodeVO;
 import com.coderman.api.system.vo.MenuVO;
-import com.wuwenze.poi.ExcelKit;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -123,7 +122,7 @@ public class MenuController {
     @ControllerEndpoint(exceptionMessage = "导出Excel失败",operation = "导出菜单excel")
     public void export(HttpServletResponse response) {
         List<Menu> menus = this.menuService.findAll();
-        ExcelKit.$Export(Menu.class, response).downXlsx(menus, false);
+//        ExcelKit.$Export(Menu.class, response).downXlsx(menus, false);
     }
 
 }

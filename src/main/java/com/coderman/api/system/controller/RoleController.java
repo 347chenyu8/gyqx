@@ -6,7 +6,6 @@ import com.coderman.api.common.pojo.system.Role;
 import com.coderman.api.system.service.MenuService;
 import com.coderman.api.system.service.RoleService;
 import com.coderman.api.system.vo.*;
-import com.wuwenze.poi.ExcelKit;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -174,7 +173,7 @@ public class RoleController {
     @ControllerEndpoint(exceptionMessage = "导出Excel失败",operation = "导出角色excel")
     public void export(HttpServletResponse response) {
         List<Role> roles = this.roleService.findAll();
-        ExcelKit.$Export(Role.class, response).downXlsx(roles, false);
+//        ExcelKit.$Export(Role.class, response).downXlsx(roles, false);
     }
 
 

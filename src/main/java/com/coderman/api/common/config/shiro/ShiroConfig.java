@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 
 import javax.servlet.Filter;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Configuration
@@ -41,18 +41,17 @@ public class ShiroConfig {
         ShiroFilterFactoryBean factoryBean = new ShiroFilterFactoryBean();
 
         // 添加自己的过滤器并且取名为jwt
-        Map<String, Filter> filterMap = new HashMap<>();
+        Map<String, Filter> filterMap = new LinkedHashMap<>();
         filterMap.put("jwt", new JWTFilter());
         factoryBean.setFilters(filterMap);
 
-        factoryBean.setSecurityManager(securityManager);
+            factoryBean.setSecurityManager(securityManager);
         /*
          * 自定义url规则
          * http://shiro.apache.org/web.html#urls-
          */
-        Map<String, String> filterRuleMap = new HashMap<>();
+        Map<String, String> filterRuleMap = new LinkedHashMap<>();
         // 所有请求通过我们自己的JWT Filter
-        filterRuleMap.put("/**", "jwt");
         // 访问401和404页面不通过我们的Filter
         filterRuleMap.put("/user/login", "anon");
 
@@ -69,6 +68,20 @@ public class ShiroConfig {
         filterRuleMap.put("/mettingGroup/getAllGroup", "anon");
         filterRuleMap.put("/mettingGroup/getAllGroupUser", "anon");
         filterRuleMap.put("/check/check", "anon");
+        //钉钉 总经理信箱
+        filterRuleMap.put("/zjlmail/save", "anon");
+        filterRuleMap.put("/zjlmail/welcome", "anon");
+        filterRuleMap.put("/zjlmail/login", "anon");
+        filterRuleMap.put("/zjlmail/getUserAllMail", "anon");
+        filterRuleMap.put("/zjlmail/getMailById", "anon");
+        filterRuleMap.put("/zjlmail/replyMail", "anon");
+        filterRuleMap.put("/zjlmail/getUserSearchMail", "anon");
+
+        filterRuleMap.put("/**", "jwt");
+
+
+
+
         factoryBean.setFilterChainDefinitionMap(filterRuleMap);
         return factoryBean;
     }

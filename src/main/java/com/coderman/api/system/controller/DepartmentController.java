@@ -7,7 +7,6 @@ import com.coderman.api.system.service.DepartmentService;
 import com.coderman.api.system.vo.DeanVO;
 import com.coderman.api.system.vo.DepartmentVO;
 import com.coderman.api.system.vo.PageVO;
-import com.wuwenze.poi.ExcelKit;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
@@ -139,7 +138,7 @@ public class DepartmentController {
     @ControllerEndpoint(exceptionMessage = "导出Excel失败",operation = "导出部门excel")
     public void export(HttpServletResponse response) {
         List<Department> departments = this.departmentService.findAll();
-        ExcelKit.$Export(Department.class, response).downXlsx(departments, false);
+//        ExcelKit.$Export(Department.class, response).downXlsx(departments, false);
     }
 
 }
