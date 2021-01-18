@@ -1,8 +1,8 @@
 package com.coderman.api.metting.service;
 
-import com.coderman.api.common.pojo.metting.Group;
 import com.coderman.api.common.pojo.metting.Metting;
-import com.coderman.api.system.vo.LogVO;
+import com.coderman.api.common.pojo.system.User;
+import com.coderman.api.system.vo.GroupInfoVO;
 import com.coderman.api.system.vo.PageVO;
 
 import java.util.List;
@@ -35,4 +35,31 @@ public interface MettingService {
      */
     Metting findMettingByid( Long id);
 
+//    /**
+//     * 查找会议组织者
+//     * @param id
+//     */
+//    findConstitutorByid(String id);
+
+    /**
+     * 查找会议组织者
+     * @param id
+     * @return
+     */
+    List<Long> constitutorUsers(Long id);
+    /**
+     *查找会议参与人员
+     * @param id
+     * @return
+     */
+    List<User> findNotInConstitutorUsersList(Long id);
+    /**
+    * 分配组织者
+    * @param id
+    */
+    void setConstitutorUsers(Long id, Long[] rids);
+//    /**
+//     * 获取分组用户信息
+//     */
+//    GroupInfoVO[] getMettingUserInfo();
 }

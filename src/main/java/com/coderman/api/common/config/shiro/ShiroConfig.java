@@ -65,9 +65,11 @@ public class ShiroConfig {
         filterRuleMap.put("/druid/**","anon");
         //会议相关
         filterRuleMap.put("/metting/getQRCode/*", "anon");
+        filterRuleMap.put("/metting/findMettingByID", "anon");
         filterRuleMap.put("/mettingGroup/getAllGroup", "anon");
         filterRuleMap.put("/mettingGroup/getAllGroupUser", "anon");
         filterRuleMap.put("/check/check", "anon");
+
         //钉钉 总经理信箱
         filterRuleMap.put("/zjlmail/save", "anon");
         filterRuleMap.put("/zjlmail/welcome", "anon");

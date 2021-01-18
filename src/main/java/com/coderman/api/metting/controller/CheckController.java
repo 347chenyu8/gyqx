@@ -31,7 +31,14 @@ public class CheckController {
      * @return
      */
     @PostMapping("/check")
-    public ResponseBean check(@RequestBody Check check) {
+    public ResponseBean check(@RequestParam(value = "mettingid") long mettingid,
+                              @RequestParam(value = "groupid") long groupid,
+                              @RequestParam(value = "userid") long userid
+    ) {
+        Check check = new Check();
+        check.setGroupid(groupid);
+        check.setMettingid(mettingid);
+        check.setUserid(userid);
         checkService.check(check);
         return ResponseBean.success();
     }

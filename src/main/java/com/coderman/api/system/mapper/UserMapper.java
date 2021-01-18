@@ -13,4 +13,10 @@ public interface UserMapper extends Mapper<User> {
      */
     List<User> findNotGroupUser(Long id);
 
+    /**
+     * 不在指定会议的组织者的人员
+     * @return
+     */
+    List<User> findNotConstitutorUser(Long id);
+
 }

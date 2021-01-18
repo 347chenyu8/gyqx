@@ -7,4 +7,12 @@
     select * from tb_user where id not in (select userid from m_user_group where groupid != #{id})
   </select>
 
+  <select id="getMettingUserInfo" resultType="com.coderman.api.system.vo.GroupUserVO">
+    select * from metting_group_user
+  </select>
+
+  <select id="findNotConstitutorUser" resultType="com.coderman.api.common.pojo.system.User"
+          parameterType="Long">
+    select * from tb_user where id not in (select user_id from m_metting_constitutor where metting_id != #{id})
+  </select>
 </mapper>
