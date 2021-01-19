@@ -36,4 +36,8 @@ public class SgOutputServiceImpl implements SgOutputService {
     }
 
 
+    @Override
+    public void updateReportTime() {
+
+    }
 }

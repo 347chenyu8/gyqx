@@ -37,6 +37,9 @@ public class SgInputServiceImpl implements SgInputService {
             qfbjInputMapper.insert(data);
         }
     }
+    @Override
+    public void updateReportTime() {
 
+    }
 
 }

@@ -35,38 +35,12 @@ import java.util.List;
 @Slf4j
 @Api(tags = "文件上传接口")
 @RestController
-@RequestMapping("/upload")
+@RequestMapping("/me")
 public class UploadController {
 
 
     @Autowired
     private UploadService uploadService;
-
-    @Autowired
-    private JdeInputService jdeInputService;
-
-    @Autowired
-    private JdeOutputService jdeOutputService;
-
-    @Autowired
-    private DwsOutputService dwsOutputService;
-    @Autowired
-    private WjOutputService wjOutputService;
-    @Autowired
-    private SgOutputService sgOutputService;
-    @Autowired
-    private ZhjOutputService zhjOutputService;
-
-    @Autowired
-    private WjInputService wjInputService;
-    @Autowired
-    private SgInputService sgInputService;
-    @Autowired
-    private ZhjInputService zhjInputService;
-    @Autowired
-    private DwsInputService dwsInputService;
-
-
     /**
      * 上传图片文件
      *
@@ -112,127 +86,5 @@ public class UploadController {
         return ResponseBean.success();
     }
 
-    /**
-     * 上传 jde采购 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/jdeInput/")
-    @Transactional
-    public ResponseBean uploadJdeInputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), JdeInput.class, new JdeInputListener(jdeInputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
 
-    /**
-     * 上传 jde销售 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/jdeOutput/")
-    @Transactional
-    public ResponseBean uploadJdeOutputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), JdeOutput.class, new JdeInputListener(jdeOutputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
-    /**
-     * 上传 dws 采购 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/dwsInput/")
-    @Transactional
-    public ResponseBean uploadDwsInputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), QfbjInput.class, new JdeInputListener(dwsInputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
-    /**
-     * 上传 dws销售 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/dwsOutput/")
-    @Transactional
-    public ResponseBean uploadDwsOutputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), QfbjOutput.class, new JdeInputListener(dwsOutputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
-
-    /**
-     * 上传 维健采购 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/wjInput/")
-    @Transactional
-    public ResponseBean uploadWjInputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), QfbjInput.class, new JdeInputListener(wjInputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
-
-    /**
-     * 上传 维健销售 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/wjOutput/")
-    @Transactional
-    public ResponseBean uploadWjOutputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), QfbjOutput.class, new JdeInputListener(wjOutputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
-    /**
-     * 上传 思高采购 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/sgInput/")
-    @Transactional
-    public ResponseBean uploadSgInputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), QfbjInput.class, new JdeInputListener(sgInputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
-    /**
-     * 上传 思高销售 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/sgOutput/")
-    @Transactional
-    public ResponseBean uploadSgOutputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), QfbjOutput.class, new JdeInputListener(sgOutputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
-    /**
-     * 上传 思高采购 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/zhjInput/")
-    @Transactional
-    public ResponseBean uploadZhjInputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), QfbjInput.class, new JdeInputListener(zhjInputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
-    /**
-     * 上传 智合健销售 Excel文件
-     *
-     * @param file
-     * @return
-     */
-    @PostMapping("/zhjOutput/")
-    @Transactional
-    public ResponseBean uploadZhjOutputExcel(MultipartFile file) throws IOException {
-        EasyExcel.read(file.getInputStream(), QfbjOutput.class, new JdeInputListener(zhjOutputService)).sheet().doRead();
-        return ResponseBean.success();
-    }
 }

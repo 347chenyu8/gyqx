@@ -4,6 +4,8 @@ import com.coderman.api.common.pojo.report.JdeInput;
 import com.coderman.api.common.pojo.report.JdeOutput;
 import tk.mybatis.mapper.common.Mapper;
 
+import java.util.Date;
+
 /**
  * @Author chenyu
  * @Date 2020/12/2 20:27
@@ -11,5 +13,5 @@ import tk.mybatis.mapper.common.Mapper;
  **/
 public interface JdeOutputMapper extends Mapper<JdeOutput> {
 
-
+    Date getMax();
 }

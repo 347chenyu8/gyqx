@@ -36,4 +36,8 @@ public class WjOutputServiceImpl implements WjOutputService {
     }
 
 
+    @Override
+    public void updateReportTime() {
+
+    }
 }

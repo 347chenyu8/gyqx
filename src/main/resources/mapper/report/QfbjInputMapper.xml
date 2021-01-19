@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.api.report.mapper.QfbjInputMapper">
+
+  <select id="getMax" resultType="java.util.Date"  parameterType="String">
+    select max(t_b) from qfbj_input where type=#{tpye}
+  </select>
+
+
+</mapper>

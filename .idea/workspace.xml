@@ -2,22 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bc0098de-1555-475b-b0df-4f7e5b9cd099" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/MettingConstitutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/MettingConstitutorMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/system/vo/GroupInfoChildVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/system/vo/GroupInfoVO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/system/vo/GroupUserVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doc/sql/report.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/controller/ReportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/ReportInputMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/ReportOutputMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/ReportTimeMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/ReportInput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/ReportOutput.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/ReportTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/report/JdeInputMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/report/JdeOutputMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/report/QfbjInputMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/report/QfbjOutputMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/common/config/shiro/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/common/config/shiro/ShiroConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/CheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/CheckController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/MettingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/MettingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/UserGroupMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/UserGroupMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/MettingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/MettingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/impl/MettingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/impl/MettingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/system/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/system/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/system/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/system/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/JdeInputListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/JdeInputListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/JdeInputMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/JdeInputMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/JdeOutputMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/JdeOutputMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/QfbjInputMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/QfbjInputMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/QfbjOutputMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/QfbjOutputMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/ExcelDataService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/ExcelDataService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsInputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsInputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsOutputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsOutputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeInputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeInputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeOutputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeOutputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgInputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgInputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgOutputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgOutputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjInputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjInputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjOutputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjOutputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjInputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjInputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjOutputServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjOutputServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/coderman/api/system/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/coderman/api/system/controller/UploadController.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,7 +58,7 @@
     <session id="-1697833174">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="19" />
+          <entry key="project.closed" value="20" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -53,54 +67,54 @@
           <entry key="project.open.time.14" value="2" />
           <entry key="project.open.time.2" value="6" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.8" value="5" />
+          <entry key="project.open.time.8" value="6" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="20" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="26" />
-          <entry key="java" value="360" />
+          <entry key="class" value="28" />
+          <entry key="java" value="450" />
           <entry key="md" value="1" />
           <entry key="pom" value="4" />
           <entry key="properties" value="4" />
-          <entry key="sql" value="8" />
+          <entry key="sql" value="20" />
           <entry key="txt" value="1" />
-          <entry key="xml" value="30" />
+          <entry key="xml" value="41" />
           <entry key="yml" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="26" />
-          <entry key="JAVA" value="360" />
+          <entry key="CLASS" value="28" />
+          <entry key="JAVA" value="450" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="4" />
-          <entry key="SQL" value="8" />
-          <entry key="XML" value="34" />
+          <entry key="SQL" value="20" />
+          <entry key="XML" value="45" />
           <entry key="YAML" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="24" />
-          <entry key="java" value="6248" />
+          <entry key="dummy" value="30" />
+          <entry key="java" value="7760" />
           <entry key="properties" value="1" />
-          <entry key="sql" value="44" />
-          <entry key="txt" value="19" />
-          <entry key="xml" value="563" />
+          <entry key="sql" value="88" />
+          <entry key="txt" value="27" />
+          <entry key="xml" value="597" />
           <entry key="yml" value="160" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6248" />
-          <entry key="PLAIN_TEXT" value="43" />
+          <entry key="JAVA" value="7760" />
+          <entry key="PLAIN_TEXT" value="57" />
           <entry key="Properties" value="1" />
-          <entry key="SQL" value="44" />
-          <entry key="XML" value="563" />
+          <entry key="SQL" value="89" />
+          <entry key="XML" value="596" />
           <entry key="YAML" value="160" />
         </counts>
       </usages-collector>
@@ -109,104 +123,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/controller/IndexController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjInputServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1995">
-              <caret line="130" column="64" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="64" />
+            <state relative-caret-position="1847">
+              <caret line="106" column="5" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="106" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/MettingController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1026">
-              <caret line="74" column="35" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="35" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/impl/MettingServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2109">
-              <caret line="131" column="51" selection-start-line="131" selection-start-column="51" selection-end-line="131" selection-end-column="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/mapper/UserMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="19" column="37" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/metting/UserGroupMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="2" column="66" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="66" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/MettingService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1045">
-              <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="63" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/system/UserMapper.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsOutputServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+            <state relative-caret-position="872">
+              <caret line="80" column="28" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/CheckController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeOutputServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="33" column="43" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="43" />
+            <state relative-caret-position="289">
+              <caret line="104" column="32" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/MettingGroupController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjOutputServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="90" />
-              <folding>
-                <element signature="e#2215#2216#0" expanded="true" />
-                <element signature="e#2289#2290#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="283">
+              <caret line="102" column="44" lean-forward="true" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/report/QfbjInput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="152" column="21" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/report/QfbjOutput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="62">
+              <caret line="49" column="17" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/ReportOutput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="503">
+              <caret line="48" column="27" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -225,15 +202,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;,</find>
-      <find>pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;</find>
-      <find>JsonFormat(</find>
-      <find>timezone = &quot;GMT+8&quot;, pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;, timezone = &quot;GMT+8&quot;</find>
-      <find>findMenu</find>
-      <find>excel</find>
-      <find>LocalDateTime</find>
-      <find>yyyy-MM-dd HH:mm:ss</find>
-      <find>tay</find>
       <find>lombok</find>
       <find>DwsOutputService</find>
       <find>SAD1707051A</find>
@@ -255,6 +223,15 @@
       <find>@RequestParam</find>
       <find>getQRCode</find>
       <find>gyqx_favicon</find>
+      <find>zhjOutput/</find>
+      <find>updateByExampleSelective</find>
+      <find>商品编码</find>
+      <find>商品</find>
+      <find>规格</find>
+      <find>供应商</find>
+      <find>行</find>
+      <find>线</find>
+      <find>reportInput</find>
     </findStrings>
     <replaceStrings>
       <replace>r chenyu</replace>
@@ -263,6 +240,8 @@
       <replace />
       <replace>timezone = &quot;GMT+8&quot;, pattern = &quot;yyyy-MM-dd HH:mm:ss&quot;</replace>
       <replace>String</replace>
+      <replace>ReportOutput</replace>
+      <replace>reportOutput</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -272,41 +251,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/ZhjOutputService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/report/WjOutput.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/report/DwsOutput.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/QfbjInputMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/DwsInputService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/SgInputService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/WjInputService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/ZhjInputService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/report/QfbjInput.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsInputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsOutputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeInputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeOutputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgInputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgOutputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjInputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjOutputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjInputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjOutputServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/system/controller/UploadController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/config/dingding/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/mapper/MettingMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/AccessTokenUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/mapper/ZjlMailMapper.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/MD5Utils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/UUID.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/zjlMail/DBItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/config/dingding/URLConstant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/zjlMail/ZjlMail.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/service/ZjlMailService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/controller/IndexController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/service/impl/ZjlMailServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/MettingConstitutorMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/system/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/MettingConstitutor.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/GroupUser.java" />
@@ -323,6 +267,41 @@
         <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/CheckController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/system/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/controller/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/controller/ReportController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/input.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/report_time.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/reportTime.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/report/DwsInputMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/QfbjInputMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/report/QfbjInputMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/ExcelDataService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/JdeInputListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/reportInputMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/reportTimeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/ReportTimeMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/ReportInputMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjInputServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgInputServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgOutputServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjOutputServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/system/controller/UploadController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/ReportInput.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/JdeInputMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/report/JdeInputMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsInputServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjInputServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/JdeOutputMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/report/JdeOutputMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/ReportOutputMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeInputServiceImpl.java" />
+        <option value="$PROJECT_DIR$/doc/sql/report.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/QfbjOutputMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/report/QfbjOutputMapper.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/ReportOutput.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsOutputServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeOutputServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjOutputServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -377,7 +356,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -388,6 +366,17 @@
             <path>
               <item name="Xinguan-master" type="b2602c69:ProjectViewProjectNode" />
               <item name="Xinguan-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Xinguan-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xinguan-master" type="462c0819:PsiDirectoryNode" />
+              <item name="doc" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Xinguan-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xinguan-master" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -451,7 +440,7 @@
               <item name="coderman" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Xinguan-master" type="b2602c69:ProjectViewProjectNode" />
@@ -463,8 +452,8 @@
               <item name="coderman" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="common" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-              <item name="shiro" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Xinguan-master" type="b2602c69:ProjectViewProjectNode" />
@@ -475,7 +464,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="coderman" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="metting" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Xinguan-master" type="b2602c69:ProjectViewProjectNode" />
@@ -486,7 +475,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="coderman" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="metting" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -498,7 +487,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="coderman" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="metting" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -510,7 +499,19 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="coderman" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="metting" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Xinguan-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Xinguan-master" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="coderman" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -522,7 +523,7 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="coderman" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="metting" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
               <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -548,16 +549,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="metting" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Xinguan-master" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Xinguan-master" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="report" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Xinguan-master" type="b2602c69:ProjectViewProjectNode" />
@@ -569,6 +561,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -589,7 +582,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1610705384433" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1611026371557" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="extract.method.default.visibility" value="private" />
@@ -613,18 +606,18 @@
       <recent name="D:\myworkspace\workspace_idea2\Xinguan\doc" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.coderman.api.report.mapper" />
+      <recent name="com.coderman.api.report.pojo" />
+      <recent name="com.coderman.api.system.controller" />
       <recent name="com.coderman.api.common.pojo.metting" />
       <recent name="com.coderman.api.metting.mapper" />
-      <recent name="com.coderman.api.zjlMail.mapper" />
-      <recent name="com.coderman.api.zjlMail.service.impl" />
-      <recent name="com.coderman.api.zjlMail.service" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\Idea\gy-web\Xinguan-master\src\main\resources\mapper\report" />
+      <recent name="D:\workspace\Idea\gy-web\Xinguan-master\doc\sql" />
       <recent name="D:\workspace\Idea\gy-web\Xinguan-master\src\main\java\com\coderman\api\system\vo" />
       <recent name="D:\workspace\Idea\gy-web\Xinguan-master\lib" />
       <recent name="D:\workspace\Idea\gy-web\Xinguan-master\src\main\java\com\coderman\api\zjlMail" />
-      <recent name="D:\workspace\Idea\gy-web\Xinguan-master\src\main\resources\mapper\metting" />
-      <recent name="D:\workspace\Idea\gy-web\Xinguan-master\src\main\resources\mapper\system" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.coderman.api.biz.vo" />
@@ -3016,7 +3009,8 @@
       <workItem from="1610330495828" duration="7386000" />
       <workItem from="1610616331375" duration="1375000" />
       <workItem from="1610669004182" duration="21810000" />
-      <workItem from="1610928010935" duration="2575000" />
+      <workItem from="1610928010935" duration="13899000" />
+      <workItem from="1611015167767" duration="10670000" />
     </task>
     <task id="LOCAL-00001" summary="修改readme">
       <created>1606350395768</created>
@@ -3060,11 +3054,18 @@
       <option name="project" value="LOCAL" />
       <updated>1610356840096</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="抽签小程序完成">
+      <created>1610950342687</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610950342687</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="181720000" />
+    <option name="totallyTimeSpent" value="203714000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -3078,7 +3079,7 @@
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33512065" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2761394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -3087,9 +3088,9 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32892805" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.45521292" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32892805" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.6784141" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.7797357" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -3121,7 +3122,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改readme" />
     <MESSAGE value="metting" />
-    <option name="LAST_COMMIT_MESSAGE" value="metting" />
+    <MESSAGE value="抽签小程序完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="抽签小程序完成" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="72" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597836499941">
@@ -3202,338 +3204,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/openSourse/tools/RepMaven/org/apache/shiro/shiro-core/1.3.2/shiro-core-1.3.2.jar!/org/apache/shiro/util/StringUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="13" column="57" selection-start-line="13" selection-start-column="57" selection-end-line="13" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/openSourse/tools/RepMaven/org/apache/shiro/shiro-spring/1.3.2/shiro-spring-1.3.2-sources.jar!/org/apache/shiro/spring/web/ShiroFilterFactoryBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="400" selection-start-line="400" selection-end-line="400" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/MD5Utils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/top-api-sdk-dev-ding-open-mc-20180719.091043-1.jar!/com/dingtalk/api/response/OapiUserGetResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3407">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/top-api-sdk-dev-ding-open-mc-20180719.091043-1.jar!/com/dingtalk/api/request/OapiUserGetRequest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="6" column="115" selection-start-line="6" selection-start-column="115" selection-end-line="6" selection-end-column="115" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/zjlMail/DBItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3363">
-          <caret line="177" column="20" selection-start-line="177" selection-start-column="20" selection-end-line="177" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/openSourse/tools/RepMaven/tk/mybatis/mapper/4.0.3/mapper-4.0.3.jar!/tk/mybatis/mapper/common/example/UpdateByExampleSelectiveMapper.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/zjlMail/ZjlMail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="39" column="25" selection-start-line="39" selection-start-column="25" selection-end-line="39" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/service/ZjlMailService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="46" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/config/dingding/URLConstant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="46" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/AccessTokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/config/dingding/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/UuidUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/service/impl/ZjlMailServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="105" lean-forward="true" selection-start-line="105" selection-end-line="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/ScoreMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/impl/CheckServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/MettingConstitutorMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="41" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="64" column="15" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="181" column="8" lean-forward="true" selection-start-line="181" selection-start-column="8" selection-end-line="182" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/Metting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/MettingConstitutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/MettingMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/UserGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/GroupInfoChild.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/GroupUser.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/vo/GroupInfoChildVO.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/vo/ImageAttachmentVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/metting/GroupInfo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/UserGroupMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/vo/GroupInfoVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/vo/GroupUserVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/CheckMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/mapper/MettingGroupMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/MettingGroupService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="58" column="22" selection-start-line="58" selection-start-column="22" selection-end-line="58" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/impl/MettingGroupServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="146" column="20" selection-start-line="146" selection-start-column="20" selection-end-line="146" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/vo/UserGroupVO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/config/shiro/ShiroConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="78" column="45" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/CheckService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="28" lean-forward="true" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/controller/IndexController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1995">
-          <caret line="130" column="64" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/MettingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1026">
-          <caret line="74" column="35" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/impl/MettingServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2109">
-          <caret line="131" column="51" selection-start-line="131" selection-start-column="51" selection-end-line="131" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/mapper/UserMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="19" column="37" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/metting/UserGroupMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="66" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/MettingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1045">
-          <caret line="60" selection-start-line="60" selection-start-column="2" selection-end-line="63" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/controller/CheckController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -3545,17 +3215,353 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="456">
           <caret line="51" column="38" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="90" />
-          <folding>
-            <element signature="e#2215#2216#0" expanded="true" />
-            <element signature="e#2289#2290#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/system/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="323">
           <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/xinguan.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/metting.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-643">
+          <caret selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/report_time.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/impl/CheckServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="42" column="48" selection-start-line="42" selection-start-column="48" selection-end-line="42" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/metting/service/impl/MettingGroupServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="139" column="26" lean-forward="true" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/zjlMail/service/impl/ZjlMailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="62" column="8" selection-start-line="62" selection-start-column="8" selection-end-line="68" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/system/LoginLogExtMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/report/DwsInputMapper.xml" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/metting/UserGroupMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="66" selection-start-line="2" selection-start-column="51" selection-end-line="2" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/metting/CheckMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="173" selection-start-line="5" selection-start-column="168" selection-end-line="5" selection-end-column="173" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/report/QfbjInputMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/ReportTimeMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/utils/JdeInputListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="73" column="27" selection-start-line="73" selection-start-column="27" selection-end-line="73" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjInputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgInputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/SgOutputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/WjOutputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/system/controller/UploadController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="779">
+          <caret line="64" column="31" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/JdeInputService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/report/JdeInputMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/report/JdeInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="439" column="30" lean-forward="true" selection-start-line="439" selection-start-column="30" selection-end-line="439" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/ExcelDataService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/JdeOutputService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/controller/ReportController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="93" column="100" selection-start-line="93" selection-start-column="84" selection-end-line="93" selection-end-column="100" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/JdeInputMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="20" column="3" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/report/JdeOutputMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/ReportTime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/ReportInputMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/ReportInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/report/JdeOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="1599" column="21" selection-start-line="1599" selection-start-column="19" selection-end-line="1599" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/ReportOutputMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="63" selection-start-line="12" selection-start-column="63" selection-end-line="12" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/doc/sql/report.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="66" column="5" lean-forward="true" selection-start-line="66" selection-start-column="5" selection-end-line="66" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeInputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="65" lean-forward="true" selection-start-line="55" selection-start-column="9" selection-end-line="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/JdeOutputMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/QfbjInputMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="19" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/report/QfbjOutputMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/mapper/QfbjOutputMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="15" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/DwsOutputService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/DwsInputService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsInputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="62" column="13" lean-forward="true" selection-start-line="53" selection-start-column="12" selection-end-line="62" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjInputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1847">
+          <caret line="106" column="5" lean-forward="true" selection-start-line="80" selection-start-column="4" selection-end-line="106" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/openSourse/tools/RepMaven/tk/mybatis/mapper/4.0.3/mapper-4.0.3.jar!/tk/mybatis/mapper/common/example/UpdateByExampleSelectiveMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/report/QfbjInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="152" column="21" selection-start-line="152" selection-start-column="19" selection-end-line="152" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/common/pojo/report/QfbjOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="49" column="17" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/pojo/ReportOutput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="19" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/JdeOutputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="104" column="32" lean-forward="true" selection-start-line="104" selection-start-column="32" selection-end-line="104" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/ZhjOutputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="102" column="44" lean-forward="true" selection-start-line="102" selection-start-column="44" selection-end-line="102" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/coderman/api/report/service/impl/DwsOutputServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="872">
+          <caret line="80" column="28" selection-start-line="80" selection-start-column="17" selection-end-line="80" selection-end-column="28" />
         </state>
       </provider>
     </entry>

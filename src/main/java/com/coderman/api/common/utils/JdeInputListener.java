@@ -64,11 +64,14 @@ public class JdeInputListener extends AnalysisEventListener<Object> {
     public void doAfterAllAnalysed(AnalysisContext context) {
         // 这里也要保存数据，确保最后遗留的数据也存储到数据库
         saveData(list);
+        excelDataService.updateReportTime();
     }
     /**
      * 加上存储数据库
      */
     private void saveData(List<Object> list) {
+
         excelDataService.save(list);
+
     }
 }

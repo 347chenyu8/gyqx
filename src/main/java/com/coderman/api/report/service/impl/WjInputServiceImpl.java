@@ -38,5 +38,8 @@ public class WjInputServiceImpl implements WjInputService {
         }
     }
 
+    @Override
+    public void updateReportTime() {
 
+    }
 }
