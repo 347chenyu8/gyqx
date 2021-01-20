@@ -6,17 +6,12 @@ import com.coderman.api.common.pojo.report.JdeInput;
 import com.coderman.api.common.pojo.report.JdeOutput;
 import com.coderman.api.common.pojo.report.QfbjInput;
 import com.coderman.api.common.pojo.report.QfbjOutput;
-import com.coderman.api.common.pojo.system.ImageAttachment;
 import com.coderman.api.common.utils.JdeInputListener;
+import com.coderman.api.report.pojo.ReportGl;
 import com.coderman.api.report.service.*;
 import com.coderman.api.system.service.UploadService;
-import com.coderman.api.system.vo.ImageAttachmentVO;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -65,6 +60,13 @@ public class ReportController {
     private ZhjInputService zhjInputService;
     @Autowired
     private DwsInputService dwsInputService;
+
+    @Autowired
+    private ReportGlService reportGlService;
+
+    @Autowired
+    private ReportService reportService;
+
 
 
 
@@ -192,4 +194,29 @@ public class ReportController {
         EasyExcel.read(file.getInputStream(), QfbjOutput.class, new JdeInputListener(zhjOutputService)).sheet().doRead();
         return ResponseBean.success();
     }
+    /**
+     * 上传 千方百剂关联表
+     *
+     * @param file
+     * @return
+     */
+    @PostMapping("/reportGl/")
+    @Transactional
+    public ResponseBean uploadReportGlExcel(MultipartFile file) throws IOException {
+        EasyExcel.read(file.getInputStream(), ReportGl.class, new JdeInputListener(reportGlService)).sheet().doRead();
+        return ResponseBean.success();
+    }
+
+    /**
+     * 上传 千方百剂关联表
+     *
+     * @return
+     */
+    @PostMapping("/analyseData")
+    @Transactional
+    public ResponseBean analyseData() throws IOException {
+        reportService.analyseData();
+        return ResponseBean.success();
+    }
+
 }

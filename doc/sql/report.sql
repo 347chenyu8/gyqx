@@ -74,3 +74,21 @@ CREATE TABLE `report_output`  (
   `origcount` decimal(12,4)  COMMENT '溯源数量',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+//千方百剂销售采购订单关联表
+CREATE TABLE `report_gl`  (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `system` varchar(1) COMMENT '数据来源系统 0：国药；1：达沃斯；2：智合健',
+  `buyorder` varchar(100)  COMMENT '采购订单号',
+  `buyorderline` varchar(200)  COMMENT '采购订单行号',
+  `saleorder` varchar(100)  COMMENT '销售订单号',
+  `saleorderline` varchar(200)  COMMENT '销售订单行号',
+  `goodscode` varchar(500)  COMMENT '商品编码',
+  `goodsname` varchar(500)  COMMENT '商品名称',
+   `goodsmodle` varchar(300)  COMMENT '商品规格',
+  `batch` varchar(200)  COMMENT '批次',
+  `count` decimal(12,4)  COMMENT '销售数量',
+  `buyprice` decimal(12,4)  COMMENT '采购单价',
+  `saleprice` decimal(12,4)  COMMENT '销售单价',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
