@@ -7,6 +7,8 @@ import com.coderman.api.common.pojo.report.JdeOutput;
 import com.coderman.api.common.pojo.report.QfbjInput;
 import com.coderman.api.common.pojo.report.QfbjOutput;
 import com.coderman.api.common.utils.JdeInputListener;
+import com.coderman.api.report.mapper.JdeInputStorageMapper;
+import com.coderman.api.report.pojo.JDEInputStorage;
 import com.coderman.api.report.pojo.ReportGl;
 import com.coderman.api.report.service.*;
 import com.coderman.api.system.service.UploadService;
@@ -66,6 +68,9 @@ public class ReportController {
 
     @Autowired
     private ReportService reportService;
+
+    @Autowired
+    private JdeInputStorageService jdeInputStorageService;
 
 
 
@@ -216,6 +221,17 @@ public class ReportController {
     @Transactional
     public ResponseBean analyseData() throws IOException {
         reportService.analyseData();
+        return ResponseBean.success();
+    }
+    /**
+     * 上传 JDE入库表
+     *
+     * @return
+     */
+    @PostMapping("/jdeStorage")
+    @Transactional
+    public ResponseBean jdeStorage(MultipartFile file) throws IOException {
+        EasyExcel.read(file.getInputStream(), JDEInputStorage.class, new JdeInputListener(jdeInputStorageService)).sheet().doRead();
         return ResponseBean.success();
     }
 

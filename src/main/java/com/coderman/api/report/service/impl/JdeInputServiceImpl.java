@@ -90,7 +90,7 @@ public class JdeInputServiceImpl implements JdeInputService {
             reportInput.setGoodsmodle(data.gettL()); //商品规格
             reportInput.setSuppliercode(data.gettAg());//供应商编码
             reportInput.setSuppliername(data.gettAh());//供应商名称
-            reportInput.setBatch(data.gettBq());//批号/批次
+            reportInput.setBatch(data.gettN());//生产批次
             reportInput.setOrderno(data.gettA());//订单号
             reportInput.setOrdertype(data.gettB());//订单类型
             reportInput.setOrderline(data.gettBs());//订单行号
@@ -102,6 +102,8 @@ public class JdeInputServiceImpl implements JdeInputService {
             reportInput.setFactoryname(data.gettBb()); //厂商全称
             reportInput.setProductline(data.gettBk());
             reportInput.setProductlinecode(data.gettBj());
+
+            reportInput.setRelated(data.gettBq());//入库批号/批次
             reportInput.setCreatetime(new Date());
 
 

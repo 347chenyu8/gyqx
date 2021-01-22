@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.coderman.api.report.mapper.JdeInputStorageMapper">
+
+  <select id="getMax" resultType="java.util.Date"  >
+    select max(inputtime) from report_jdestorage
+  </select>
+
+
+</mapper>

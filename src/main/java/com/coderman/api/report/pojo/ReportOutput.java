@@ -42,6 +42,7 @@ public class ReportOutput {
     private BigDecimal costprice; //成本单价
     private BigDecimal cost; //总成本
     private BigDecimal sum; //总销售金额
+
     private BigDecimal origprice;//溯源单价
     private BigDecimal origcost; //溯源成本
     private BigDecimal origsum;  //溯源销售总金额

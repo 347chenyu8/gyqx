@@ -87,7 +87,7 @@ public class JdeOutputServiceImpl implements JdeOutputService {
             reportOutput.setGoodsmodle(data.gettO()); //商品规格
             reportOutput.setSuppliercode(data.gettH());//供应商编码
             reportOutput.setSuppliername(data.gettI());//供应商名称
-            reportOutput.setBatch(data.gettAp());//批号/批次
+            reportOutput.setBatch(data.gettP());//批号/批次
             reportOutput.setOrderno(data.gettA());//订单号
             reportOutput.setOrdertype(data.gettB());//订单类型
             reportOutput.setOrderline(data.gettE());//订单行号
@@ -105,7 +105,7 @@ public class JdeOutputServiceImpl implements JdeOutputService {
             reportOutput.setCost(data.gettCq());
             reportOutput.setSum(data.gettCs());
             reportOutput.setOrigflag("0");
-
+            reportOutput.setRelated(data.gettAp());//批号/批次
             reportOutputMapper.insert(reportOutput);
 
         }catch (Exception e){

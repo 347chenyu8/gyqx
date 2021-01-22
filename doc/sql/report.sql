@@ -36,6 +36,7 @@ CREATE TABLE `report_time`  (
 //初始化数据
 INSERT INTO gyqx.report_time (`system`, `type`, createtime, max) values ('0', '0', STR_TO_DATE('2000-01-1', '%Y-%m-%d'), STR_TO_DATE('2000-01-1', '%Y-%m-%d'));
 INSERT INTO gyqx.report_time (`system`, `type`, createtime, max) values ('0', '1', STR_TO_DATE('2000-01-1', '%Y-%m-%d'), STR_TO_DATE('2000-01-1', '%Y-%m-%d'));
+INSERT INTO gyqx.report_time (`system`, `type`, createtime, max) values ('0', '2', STR_TO_DATE('2000-01-1', '%Y-%m-%d'), STR_TO_DATE('2000-01-1', '%Y-%m-%d'));
 INSERT INTO gyqx.report_time (`system`, `type`, createtime, max) values ('1', '0', STR_TO_DATE('2000-01-1', '%Y-%m-%d'), STR_TO_DATE('2000-01-1', '%Y-%m-%d'));
 INSERT INTO gyqx.report_time (`system`, `type`, createtime, max) values ('1', '1', STR_TO_DATE('2000-01-1', '%Y-%m-%d'), STR_TO_DATE('2000-01-1', '%Y-%m-%d'));
 INSERT INTO gyqx.report_time (`system`, `type`, createtime, max) values ('2', '0', STR_TO_DATE('2000-01-1', '%Y-%m-%d'), STR_TO_DATE('2000-01-1', '%Y-%m-%d'));
@@ -90,5 +91,18 @@ CREATE TABLE `report_gl`  (
   `count` decimal(12,4)  COMMENT '销售数量',
   `buyprice` decimal(12,4)  COMMENT '采购单价',
   `saleprice` decimal(12,4)  COMMENT '销售单价',
+  PRIMARY KEY (`id`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
+
+
+//JDE入库表
+CREATE TABLE `report_jdestorage`  (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `orderno` varchar(500)  COMMENT '采购订单号',
+  `goodscode` varchar(500)  COMMENT '商品编码',
+  `goodsname` varchar(500)  COMMENT '商品名称',
+  `goodsmodle` varchar(500)  COMMENT '商品规格',
+  `batch` varchar(500)  COMMENT '批次',
+  `related` varchar(500)  COMMENT '销售数量',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 27 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci ROW_FORMAT = Dynamic;
