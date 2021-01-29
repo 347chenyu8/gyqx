@@ -49,587 +49,587 @@ public class JdeInput implements Serializable {
     /**
      * 定单 号
      */
-    @ExcelProperty(index = 0)
+    @ExcelProperty("定单 号")
     private String tA;
 
     /**
      * 定单 类型
      */
-    @ExcelProperty(index = 1)
+    @ExcelProperty("定单 类型")
     private String tB;
 
     /**
      * 定单 公司
      */
-    @ExcelProperty(index = 2)
+    @ExcelProperty("定单 公司")
     private String tC;
 
     /**
      * 公司描述
      */
-    @ExcelProperty(index = 3)
+    @ExcelProperty("公司描述")
     private String tD;
 
     /**
      * 行 类型
      */
-    @ExcelProperty(index = 4)
+    @ExcelProperty("行 类型")
     private String tE;
 
     /**
      * 项目号
      */
-    @ExcelProperty(index = 5)
+    @ExcelProperty("项目号")
     private String tF;
 
     /**
      * 项目名称
      */
-    @ExcelProperty(index = 6)
+    @ExcelProperty("项目名称")
     private String tG;
 
     /**
      * 商品编码
      */
-    @ExcelProperty(index = 7)
+    @ExcelProperty("商品编码")
     private String tH;
 
     /**
      * 厂家物料编码
      */
-    @ExcelProperty(index = 8)
+    @ExcelProperty("厂家物料编码")
     private String tI;
 
     /**
      * 商品名称
      */
-    @ExcelProperty(index = 9)
+    @ExcelProperty("商品名称")
     private String tJ;
 
     /**
      * 通用名
      */
-    @ExcelProperty(index = 10)
+    @ExcelProperty("通用名")
     private String tK;
 
     /**
      * 规格型号
      */
-    @ExcelProperty(index = 11)
+    @ExcelProperty("规格型号")
     private String tL;
 
     /**
      * 注册证号或备案凭证号
      */
-    @ExcelProperty(index = 12)
+    @ExcelProperty("注册证号或备案凭证号")
     private String tM;
 
     /**
      * 生产批号
      */
-    @ExcelProperty(index = 13)
+    @ExcelProperty("生产批号")
     private String tN;
 
     /**
      * 计量单位
      */
-    @ExcelProperty(index = 14)
+    @ExcelProperty("计量单位")
     private String tO;
 
     /**
      * 计量单位中文描述
      */
-    @ExcelProperty(index = 15)
+    @ExcelProperty("计量单位中文描述")
     private String tP;
 
     /**
      * 经营 单位
      */
-    @ExcelProperty(index = 16)
+    @ExcelProperty("经营 单位")
     private String tQ;
 
     /**
      * 经营单位 描述
      */
-    @ExcelProperty(index = 17)
+    @ExcelProperty("经营单位 描述")
     private String tR;
 
     /**
      * 发运至 地址号
      */
-    @ExcelProperty(index = 18)
+    @ExcelProperty("发运至 地址号")
     private String tS;
 
     /**
      * 定购 数量
      */
-    @ExcelProperty(index = 19)
+    @ExcelProperty("定购 数量")
     private BigDecimal tT;
 
     /**
      * 单价
      */
-    @ExcelProperty(index = 20)
+    @ExcelProperty("单价")
     private BigDecimal tU;
 
     /**
      * 金额
      */
-    @ExcelProperty(index = 21)
+    @ExcelProperty("金额")
     private BigDecimal tV;
 
     /**
      * 含税单价
      */
-    @ExcelProperty(index = 22)
+    @ExcelProperty("含税单价")
     private BigDecimal tW;
 
     /**
      * 含税总价
      */
-    @ExcelProperty(index = 23)
+    @ExcelProperty("含税总价")
     private BigDecimal tX;
 
     /**
      * 已收数量
      */
-    @ExcelProperty(index = 24)
+    @ExcelProperty("已收数量")
     private BigDecimal tY;
 
     /**
      * 已收金额
      */
-    @ExcelProperty(index = 25)
+    @ExcelProperty("已收金额")
     private BigDecimal tZ;
 
     /**
      * 货币 码
      */
-    @ExcelProperty(index = 26)
+    @ExcelProperty("货币 码")
     private String tAa;
 
     /**
      * 汇 率
      */
-    @ExcelProperty(index = 27)
+    @ExcelProperty("汇 率")
     private String tAb;
 
     /**
      * 上一 状态
      */
-    @ExcelProperty(index = 28)
+    @ExcelProperty("上一 状态")
     private String tAc;
 
     /**
      * 上一状态描述
      */
-    @ExcelProperty(index = 29)
+    @ExcelProperty("上一状态描述")
     private String tAd;
 
     /**
      * 下一 状态
      */
-    @ExcelProperty(index = 30)
+    @ExcelProperty("下一 状态")
     private String tAe;
 
     /**
      * 下一状态描述
      */
-    @ExcelProperty(index = 31)
+    @ExcelProperty("下一状态描述")
     private String tAf;
 
     /**
      * 供应商
      */
-    @ExcelProperty(index = 32)
+    @ExcelProperty("供应商")
     private String tAg;
 
     /**
      * 供货企业名称
      */
-    @ExcelProperty(index = 33)
+    @ExcelProperty("供货企业名称")
     private String tAh;
 
     /**
      * 购货日期
      */
-    @ExcelProperty(index = 34)
+    @ExcelProperty("购货日期")
     @DateTimeFormat("yyyy-MM-dd")
     private String tAi;
 
     /**
      * 供货企业地址
      */
-    @ExcelProperty(index = 35)
+    @ExcelProperty("供货企业地址")
     private String tAj;
 
     /**
      * 供应商仓库地址
      */
-    @ExcelProperty(index = 36)
+    @ExcelProperty("供应商仓库地址")
     private String tAk;
 
     /**
      * 供货企业联系方式
      */
-    @ExcelProperty(index = 37)
+    @ExcelProperty("供货企业联系方式")
     private String tAl;
 
     /**
      * 收货日期
      */
-    @ExcelProperty(index = 38)
+    @ExcelProperty("收货日期")
     @DateTimeFormat("yyyy-MM-dd")
     private String tAm;
 
     /**
      * 取消 日期
      */
-    @ExcelProperty(index = 39)
+    @ExcelProperty("取消 日期")
     @DateTimeFormat("yyyy-MM-dd")
     private String tAn;
 
     /**
      * 协议/合同号
      */
-    @ExcelProperty(index = 40)
+    @ExcelProperty("协议/合同号")
     private String tAo;
 
     /**
      * OA合同协议号
      */
-    @ExcelProperty(index = 41)
+    @ExcelProperty("OA合同协议号")
     private String tAp;
 
     /**
      * 业务发生部门
      */
-    @ExcelProperty(index = 42)
+    @ExcelProperty("业务发生部门")
     private String tAq;
 
     /**
      * 业务发生部门 描述
      */
-    @ExcelProperty(index = 43)
+    @ExcelProperty("业务发生部门 描述")
     private String tAr;
 
     /**
      * 业务承揽部门
      */
-    @ExcelProperty(index = 44)
+    @ExcelProperty("业务承揽部门")
     private String tAs;
 
     /**
      * 业务承揽部门描述
      */
-    @ExcelProperty(index = 45)
+    @ExcelProperty("业务承揽部门描述")
     private String tAt;
 
     /**
      * 分部场所
      */
-    @ExcelProperty(index = 46)
+    @ExcelProperty("分部场所")
     private String tAu;
 
     /**
      * 分部场所 描述
      */
-    @ExcelProperty(index = 47)
+    @ExcelProperty("分部场所 描述")
     private String tAv;
 
     /**
      * 业务员
      */
-    @ExcelProperty(index = 48)
+    @ExcelProperty("业务员")
     private String tAw;
 
     /**
      * 业务员姓名
      */
-    @ExcelProperty(index = 49)
+    @ExcelProperty("业务员姓名")
     private String tAx;
 
     /**
      * 制单员
      */
-    @ExcelProperty(index = 50)
+    @ExcelProperty("制单员")
     private String tAy;
 
     /**
      * 制单员 名称
      */
-    @ExcelProperty(index = 51)
+    @ExcelProperty("制单员 名称")
     private String tAz;
 
     /**
      * 生产 厂家
      */
-    @ExcelProperty(index = 52)
+    @ExcelProperty("生产 厂家")
     private String tBa;
 
     /**
      * 生产厂家名称
      */
-    @ExcelProperty(index = 53)
+    @ExcelProperty("生产厂家名称")
     private String tBb;
 
     /**
      * 境外厂家中文名称
      */
-    @ExcelProperty(index = 54)
+    @ExcelProperty("境外厂家中文名称")
     private String tBc;
 
     /**
      * 计税 Y/N
      */
-    @ExcelProperty(index = 55)
+    @ExcelProperty("计税 Y/N")
     private String tBd;
 
     /**
      * 税 说明码
      */
-    @ExcelProperty(index = 56)
+    @ExcelProperty("税 说明码")
     private String tBe;
 
     /**
      * 税率/ 税区
      */
-    @ExcelProperty(index = 57)
+    @ExcelProperty("税率/ 税区")
     private String tBf;
 
     /**
      * 税额
      */
-    @ExcelProperty(index = 58)
+    @ExcelProperty("税额")
     private BigDecimal tBg;
 
     /**
      * 存储条件
      */
-    @ExcelProperty(index = 59)
+    @ExcelProperty("存储条件")
     private String tBh;
 
     /**
      * 发票 日期
      */
-    @ExcelProperty(index = 60)
+    @ExcelProperty("发票 日期")
     @DateTimeFormat("yyyy-MM-dd")
     private String tBi;
 
     /**
      * 产品线
      */
-    @ExcelProperty(index = 61)
+    @ExcelProperty("产品线")
     private String tBj;
 
     /**
      * 产品线 名称
      */
-    @ExcelProperty(index = 62)
+    @ExcelProperty("产品线 名称")
     private String tBk;
 
     /**
      * 客商 类别
      */
-    @ExcelProperty(index = 63)
+    @ExcelProperty("客商 类别")
     private String tBl;
 
     /**
      * 客商 类别
      */
-    @ExcelProperty(index = 64)
+    @ExcelProperty("客商 类别")
     private String tBm;
 
     /**
      * 收货数量
      */
-    @ExcelProperty(index = 65)
+    @ExcelProperty("收货数量")
     private BigDecimal tBn;
 
     /**
      * 验收数量
      */
-    @ExcelProperty(index = 66)
+    @ExcelProperty("验收数量")
     private BigDecimal tBo;
 
     /**
      * 入库数量
      */
-    @ExcelProperty(index = 67)
+    @ExcelProperty("入库数量")
     private BigDecimal tBp;
 
     /**
      * 批次/序列
      */
-    @ExcelProperty(index = 68)
+    @ExcelProperty("批次/序列")
     private String tBq;
 
     /**
      * 库位
      */
-    @ExcelProperty(index = 69)
+    @ExcelProperty("库位")
     private String tBr;
 
     /**
      * 行号
      */
-    @ExcelProperty(index = 70)
+    @ExcelProperty("行号")
     private String tBs;
 
     /**
      * 原始订单号
      */
-    @ExcelProperty(index = 71)
+    @ExcelProperty("原始订单号")
     private String tBt;
 
     /**
      * 原始订单类型
      */
-    @ExcelProperty(index = 72)
+    @ExcelProperty("原始订单类型")
     private String tBu;
 
     /**
      * 原始行号
      */
-    @ExcelProperty(index = 73)
+    @ExcelProperty("原始行号")
     private String tBv;
 
     /**
      * 备注
      */
-    @ExcelProperty(index = 74)
+    @ExcelProperty("备注")
     private String tBw;
 
     /**
      * 成本规则
      */
-    @ExcelProperty(index = 75)
+    @ExcelProperty("成本规则")
     private String tBx;
 
     /**
      * 成本规则描述
      */
-    @ExcelProperty(index = 76)
+    @ExcelProperty("成本规则描述")
     private String tBy;
 
     /**
      * 商品分类
      */
-    @ExcelProperty(index = 77)
+    @ExcelProperty("商品分类")
     private String tBz;
 
     /**
      * 供应商销售单
      */
-    @ExcelProperty(index = 78)
+    @ExcelProperty("供应商销售单")
     private String tCa;
 
     /**
      * 平台类型
      */
-    @ExcelProperty(index = 79)
+    @ExcelProperty("平台类型")
     private String tCb;
 
     /**
      * 平台订单号
      */
-    @ExcelProperty(index = 80)
+    @ExcelProperty("平台订单号")
     private String tCc;
 
     /**
      * 平台行号
      */
-    @ExcelProperty(index = 81)
+    @ExcelProperty("平台行号")
     private String tCd;
 
     /**
      * 关联客商号
      */
-    @ExcelProperty(index = 82)
+    @ExcelProperty("关联客商号")
     private String tCe;
 
     /**
      * 关联客商 名称
      */
-    @ExcelProperty(index = 83)
+    @ExcelProperty("关联客商 名称")
     private String tCf;
 
     /**
      * 商品性质
      */
-    @ExcelProperty(index = 84)
+    @ExcelProperty("商品性质")
     private String tCg;
 
     /**
      * 商品性质说明
      */
-    @ExcelProperty(index = 85)
+    @ExcelProperty("商品性质说明")
     private String tCh;
 
     /**
      * 风险等级
      */
-    @ExcelProperty(index = 86)
+    @ExcelProperty("风险等级")
     private String tCi;
 
     /**
      * 风险等级说明
      */
-    @ExcelProperty(index = 87)
+    @ExcelProperty("风险等级说明")
     private String tCj;
 
     /**
      * 产品分类
      */
-    @ExcelProperty(index = 88)
+    @ExcelProperty("产品分类")
     private String tCk;
 
     /**
      * 产品分类说明
      */
-    @ExcelProperty(index = 89)
+    @ExcelProperty("产品分类说明")
     private String tCl;
 
     /**
      * 新风险等级
      */
-    @ExcelProperty(index = 90)
+    @ExcelProperty("新风险等级")
     private String tCm;
 
     /**
      * 新风险等级说明
      */
-    @ExcelProperty(index = 91)
+    @ExcelProperty("新风险等级说明")
     private String tCn;
 
     /**
      * 新产品分类
      */
-    @ExcelProperty(index = 92)
+    @ExcelProperty("新产品分类")
     private String tCo;
 
     /**
      * 新产品分类说明
      */
-    @ExcelProperty(index = 93)
+    @ExcelProperty("新产品分类说明")
     private String tCp;
 
     /**
      * 退货原因
      */
-    @ExcelProperty(index = 94)
+    @ExcelProperty("退货原因")
     private String tCq;
 
     /**
      * 退货原因说明
      */
-    @ExcelProperty(index = 95)
+    @ExcelProperty("退货原因说明")
     private String tCr;
 
     /**
      * 退货原因详细描述
      */
-    @ExcelProperty(index = 96)
+    @ExcelProperty("退货原因详细描述")
     private String tCs;
 
     public Long getId() {

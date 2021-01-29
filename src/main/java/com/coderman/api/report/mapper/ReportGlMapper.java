@@ -5,6 +5,8 @@ import com.coderman.api.report.pojo.ReportGl;
 import com.coderman.api.report.pojo.ReportTime;
 import tk.mybatis.mapper.common.Mapper;
 
+import java.util.Date;
+
 /**
  * @Author chenyu
  * @Date 2020/12/2 20:27

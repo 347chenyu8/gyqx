@@ -9,9 +9,12 @@ import com.coderman.api.report.service.ReportGlService;
 import com.coderman.api.report.service.ReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -31,13 +34,17 @@ public class ReportServiceImpl implements ReportService {
     @Autowired
     JdeInputStorageMapper jdeInputStorageMapper;
 
+    private  static final String corp_name_gyqx="国药器械（海南）有限公司";
+    private  static final String corp_name_dws="海南达沃斯科技有限公司";
+    private  static final String corp_name_zhj="海南智合健科技有限公司";
+
     @Override
     public void analyseData() {
         //1.关联采销数据
         //1.1查找智合健所有销售数据 未处理的销售
         Example o = new Example(ReportOutput.class);
         Example.Criteria criteria = o.createCriteria();
-        criteria.andEqualTo("system",'2');
+        criteria.andEqualTo("system",'0');
         criteria.andEqualTo("origflag",'0');
         List<ReportOutput> reportOutputs = reportOutputMapper.selectByExample(o);
         //1.2逐条查找采购订单号
@@ -52,10 +59,22 @@ public class ReportServiceImpl implements ReportService {
             while(buyData !=null){
                 if(insideCorp(buyData.getSuppliername())){
                     ReportOutput outPutByInput = getOutPutByInput(buyData);
+                    if(outPutByInput == null){
+                        item.setOrigflag("2");//失败溯源
+                        item.setOrigprice(item.getCostprice()); // 溯源成本单价
+                        item.setOrigcost(item.getCost()); //溯源成本
+                        item.setResult("未能关联到上级内部销售单");
+                        break;
+                    }
                     buyData = getBuyData(outPutByInput);
+
                 }else{
                     item.setOrigflag("1");//成功溯源
                     BigDecimal price = buyData.getPrice();
+                    System.out.println("chenyu"+buyData.getId());
+                    if(price == null){
+                        price = new BigDecimal("0");
+                    }
                     BigDecimal cost = price.multiply(count1);
                     item.setOrigprice(price); // 溯源成本单价
                     item.setOrigcost(cost); //溯源成本
@@ -66,6 +85,7 @@ public class ReportServiceImpl implements ReportService {
                 item.setOrigflag("2");//失败溯源
                 item.setOrigprice(item.getCostprice()); // 溯源成本单价
                 item.setOrigcost(item.getCost()); //溯源成本
+                item.setResult("未能关联到采购订单");
             }
             //更新溯源销售记录
             UpdateOutPutByID(item);
@@ -78,11 +98,27 @@ public class ReportServiceImpl implements ReportService {
      * @param line
      * @return
      */
-    ReportInput getInputByOrderAndLine(String order,String line){
+    ReportInput getInputByOrderAndLine(String order,String line,String buyyear){
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date beginTime =null;
+        Date endTime =null;
+
+        try{
+             beginTime = sdf.parse(buyyear+"-01-01 00:00:00");
+             endTime = sdf.parse(buyyear+"-12-31 23:59:59");
+
+        }catch (Exception e){
+            return null;
+        }
+
+
+
         Example o = new Example(ReportInput.class);
         Example.Criteria criteria = o.createCriteria();
         criteria.andEqualTo("orderno",order);
         criteria.andEqualTo("orderline",line);
+        criteria.andGreaterThanOrEqualTo("inputtime",beginTime);//大于等于
+        criteria.andLessThanOrEqualTo("inputtime",endTime);//小于等于
         List<ReportInput> ReportInput = reportInputMapper.selectByExample(o);
         return  ReportInput.get(0);
     }
@@ -93,7 +129,7 @@ public class ReportServiceImpl implements ReportService {
      * @return
      */
     boolean insideCorp(String factoryname){
-        if(factoryname.equals("国药器械（海南）有限公司") || factoryname.equals("海南达沃斯科技有限公司")){
+        if(factoryname.equals(corp_name_gyqx) || factoryname.equals(corp_name_dws) || factoryname.equals(corp_name_zhj)){
             return true;
         }else{
             return false;
@@ -106,7 +142,7 @@ public class ReportServiceImpl implements ReportService {
      * @return
      */
     String getSystemCodeBySuppliername(String suppliername){
-        if(suppliername.equals("国药器械（海南）有限公司") ){
+        if(suppliername.equals(corp_name_gyqx) ){
             return "0";
         }else if(suppliername.equals("海南达沃斯科技有限公司")){
             return "1";
@@ -124,6 +160,7 @@ public class ReportServiceImpl implements ReportService {
         Example o = new Example(JDEInputStorage.class);
         Example.Criteria criteria = o.createCriteria();
         criteria.andEqualTo("related",related);
+//        criteria.andEqualTo("ordertype","OP");  //测试环境没有这个类型
         List<JDEInputStorage> storages = jdeInputStorageMapper.selectByExample(o);
         if(storages.size() == 1){
             return  storages.get(0);
@@ -148,13 +185,15 @@ public class ReportServiceImpl implements ReportService {
             }
             String orderno = storageByRelated.getOrderno(); //采购订单号
             String goodscode = storageByRelated.getGoodscode();//商品编码
+            String orderline = storageByRelated.getOrderline();//商品编码
             Example o = new Example(ReportInput.class);
             Example.Criteria criteria = o.createCriteria();
             criteria.andEqualTo("system",system);
             criteria.andEqualTo("goodscode",goodscode);
             criteria.andEqualTo("orderno",orderno);
+            criteria.andEqualTo("orderline",orderline);
             List<ReportInput> reportInputs = reportInputMapper.selectByExample(o);
-            if(reportInputs.size() != 1){
+            if(reportInputs.size() == 0){
                 return null;
             }
             return  reportInputs.get(0);
@@ -163,15 +202,22 @@ public class ReportServiceImpl implements ReportService {
             //达沃斯和智和健 前方百计系统
             Example gl = new Example(ReportGl.class);
             Example.Criteria glcriteria = gl.createCriteria();
+            Date inputtime = reportOutput.getInputtime();
+            Calendar c = Calendar.getInstance();
+            c.setTime(inputtime);
+            String year = ""+c.get(Calendar.YEAR);
             glcriteria.andEqualTo("saleorder",reportOutput.getOrderno());
             glcriteria.andEqualTo("saleorderline",reportOutput.getOrderline());
+            glcriteria.andEqualTo("year",year);
             List<ReportGl> reportGls = reportGlMapper.selectByExample(gl);
             if (reportGls.size() !=1 ){
                 return null;
             }else{
                 String buyOrder = reportGls.get(0).getBuyorder();
                 String buyOrderline = reportGls.get(0).getBuyorderline();
-                ReportInput inputByOrderAndLine = getInputByOrderAndLine(buyOrder, buyOrderline);
+                String buyyear = reportGls.get(0).getBuyyear();
+                ReportInput inputByOrderAndLine = getInputByOrderAndLine(buyOrder, buyOrderline,buyyear);
+                inputByOrderAndLine.setRemake(reportGls.get(0).getRemake());
                 return inputByOrderAndLine;
             }
         }
@@ -205,39 +251,65 @@ public class ReportServiceImpl implements ReportService {
     }
     /**
      * 根据A系统的采购单关联B系统的销售单
-     * 主要根据销售数量商品名称 规格 价格，采购日期之前 仅匹配
+     *
      * @param reportInput
      * @return
      */
-    private ReportOutput getOutPutByInput(ReportInput reportInput){
-        String factoryname = reportInput.getSuppliername();
-        String batch = reportInput.getBatch(); //获取生产批次
-        BigDecimal count = reportInput.getCount(); //获取采购数量
-        String goodsname = reportInput.getGoodsname();//获取名称
-        String goodsmodle = reportInput.getGoodsmodle(); //获取采购规格
-        BigDecimal price = reportInput.getPrice();//获取采购单价
-        Date inputtime = reportInput.getInputtime(); //获取采购日期
-        String system = getSystemCodeBySuppliername(factoryname);
-        String suppliername = getSystemNameBySystemCode(reportInput.getSystem());
-        Example o = new Example(ReportInput.class);
-        Example.Criteria criteria = o.createCriteria();
-        criteria.andEqualTo("system",system);
-        criteria.andEqualTo("count",count);
-        criteria.andEqualTo("goodsname",goodsname);
-//        criteria.andEqualTo("goodsmodle",goodsmodle);  //取消商品规格
-        criteria.andEqualTo("price",price);
-        criteria.andEqualTo("suppliername",suppliername);
-        criteria.andLessThanOrEqualTo("inputtime",inputtime);
-        o.setOrderByClause("inputtime desc");
-
-        List<ReportOutput> reportOutputs = reportOutputMapper.selectByExample(o);
-        if(reportOutputs.size() != 0){
-            return  reportOutputs.get(0);
-        }else{
-            return null;
+    private ReportOutput getOutPutByInput(ReportInput reportInput) {
+        String Suppliername = reportInput.getSuppliername();
+        if (reportInput.getSystem().equals("0")) {
+            //国药从达沃斯采购
+            if (Suppliername.equals(corp_name_dws)) {
+                String remake = reportInput.getRemake();
+                Example o = new Example(ReportOutput.class);
+                Example.Criteria criteria = o.createCriteria();
+                criteria.andEqualTo("related",remake);
+                criteria.andEqualTo("system",'1');
+                List<ReportOutput> reportOutputList = reportOutputMapper.selectByExample(o);
+                if(reportOutputList.size()==0){
+                    return null;
+                }
+                return reportOutputList.get(0);
+            }
+        } else if (reportInput.getSystem().equals("1")) {
+            //达沃斯从国药采购
+            if (Suppliername.equals(corp_name_gyqx)) {
+                String remake = reportInput.getRemake();
+                if(StringUtils.isEmpty(remake)){
+                    return null;
+                }
+                Example sale = new Example(ReportOutput.class);
+                Example.Criteria salecriteria = sale.createCriteria();
+                salecriteria.andEqualTo("system", "0");
+                salecriteria.andEqualTo("suppliername", corp_name_dws);
+                salecriteria.andEqualTo("related", remake);
+                List<ReportOutput> solereport = reportOutputMapper.selectByExample(sale);
+                if (solereport.size() == 0) {
+                    return null;
+                } else {
+                    return solereport.get(0);
+                }
+            }
+        } else if (reportInput.getSystem().equals("2")) {
+            //智合健从国药采购
+            if (Suppliername.equals(corp_name_gyqx)) {
+                String remake = reportInput.getRemake();
+                if(StringUtils.isEmpty(remake)){
+                    return null;
+                }
+                Example sale = new Example(ReportOutput.class);
+                Example.Criteria salecriteria = sale.createCriteria();
+                salecriteria.andEqualTo("system", "0");
+                salecriteria.andEqualTo("suppliername", corp_name_zhj);
+                salecriteria.andEqualTo("related", remake);
+                List<ReportOutput> solereport = reportOutputMapper.selectByExample(sale);
+                if (solereport.size() == 0) {
+                    return null;
+                } else {
+                    return solereport.get(0);
+                }
+            }
         }
-
+        return  null;
     }
-
-
 }

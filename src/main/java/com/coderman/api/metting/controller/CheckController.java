@@ -2,10 +2,14 @@ package com.coderman.api.metting.controller;
 
 import com.coderman.api.common.bean.ResponseBean;
 import com.coderman.api.common.pojo.metting.Check;
+import com.coderman.api.common.pojo.metting.Group;
 import com.coderman.api.metting.service.CheckService;
+import com.coderman.api.metting.service.MettingGroupService;
 import com.coderman.api.system.vo.CheckVo;
+import com.coderman.api.system.vo.UserGroupVO;
 import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,7 +24,7 @@ import java.util.List;
  **/
 @Api(tags = "会议签到接口")
 @RestController
-@RequestMapping("/check")
+@RequestMapping("/checkFreemarker")
 public class CheckController {
     @Autowired
     CheckService checkService;
@@ -47,6 +51,8 @@ public class CheckController {
         List<CheckVo> checkVolist = checkService.getCheckByMettingID(id);
         return ResponseBean.success(checkVolist);
     }
+
+
 
 
 }

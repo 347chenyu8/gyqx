@@ -69,6 +69,7 @@ public class ShiroConfig {
         filterRuleMap.put("/mettingGroup/getAllGroup", "anon");
         filterRuleMap.put("/mettingGroup/getAllGroupUser", "anon");
         filterRuleMap.put("/check/check", "anon");
+        filterRuleMap.put("/getCheckIndex/**", "anon");
 
         //钉钉 总经理信箱
         filterRuleMap.put("/zjlmail/save", "anon");

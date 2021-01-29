@@ -92,7 +92,7 @@ public class DwsInputServiceImpl implements DwsInputService {
             reportInput.setOrderno(data.gettE());
             reportInput.setOrdertype(data.gettG());
             reportInput.setOrderline(data.gettH());
-            reportInput.setPrice(data.gettAm());//含税单价
+            reportInput.setPrice(data.gettAh());//不含税单价
             reportInput.setCount(data.gettAg());//采购数量
             reportInput.setUnit(data.gettK());//基本单位
             reportInput.setInputtime(sdf.parse(data.gettB())); //采购日期

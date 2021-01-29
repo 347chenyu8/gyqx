@@ -94,7 +94,7 @@ public class JdeInputServiceImpl implements JdeInputService {
             reportInput.setOrderno(data.gettA());//订单号
             reportInput.setOrdertype(data.gettB());//订单类型
             reportInput.setOrderline(data.gettBs());//订单行号
-            reportInput.setPrice(data.gettW());//含税单价
+            reportInput.setPrice(data.gettU());//采购单价
             reportInput.setCount(data.gettT());//采购数量
             reportInput.setUnit(data.gettP());//基本单位
             reportInput.setInputtime(sdf.parse(data.gettAi())); //采购日期
@@ -104,6 +104,7 @@ public class JdeInputServiceImpl implements JdeInputService {
             reportInput.setProductlinecode(data.gettBj());
 
             reportInput.setRelated(data.gettBq());//入库批号/批次
+            reportInput.setRemake(data.gettBw()); //备注，达沃斯销售给国药时，记录达沃斯的批次号
             reportInput.setCreatetime(new Date());
 
 

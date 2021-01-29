@@ -56,4 +56,11 @@ public class ReportGl {
     @ExcelProperty("采购单价")
     private BigDecimal saleprice; //'销售单价'
 
+    @ExcelProperty("备注")
+    private String remake; //''备注''
+
+    @ExcelProperty("年份")
+    private String year; //''年份''
+    @ExcelProperty("采购年份")
+    private String buyyear; //''年份''
 }

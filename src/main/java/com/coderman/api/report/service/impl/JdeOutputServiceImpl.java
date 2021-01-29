@@ -91,7 +91,7 @@ public class JdeOutputServiceImpl implements JdeOutputService {
             reportOutput.setOrderno(data.gettA());//订单号
             reportOutput.setOrdertype(data.gettB());//订单类型
             reportOutput.setOrderline(data.gettE());//订单行号
-            reportOutput.setPrice(data.gettBi());//含税单价
+            reportOutput.setPrice(data.gettX());//不含税单价
             reportOutput.setCount(data.gettS());//采购数量
             reportOutput.setUnit(data.gettW());//基本单位
             reportOutput.setInputtime(sdf.parse(data.gettZ())); //采购日期
@@ -101,9 +101,9 @@ public class JdeOutputServiceImpl implements JdeOutputService {
             reportOutput.setProductlinecode(data.gettEq());
             reportOutput.setCreatetime(new Date());
 
-            reportOutput.setCostprice(data.gettCq());
-            reportOutput.setCost(data.gettCq());
-            reportOutput.setSum(data.gettCs());
+            reportOutput.setCostprice(data.gettCp()); // 成本单价
+            reportOutput.setCost(data.gettCq()); //成本金额
+            reportOutput.setSum(data.gettY()); //销售金额
             reportOutput.setOrigflag("0");
             reportOutput.setRelated(data.gettAp());//批号/批次
             reportOutputMapper.insert(reportOutput);

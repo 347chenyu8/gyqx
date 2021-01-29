@@ -93,17 +93,18 @@ public class DwsOutputServiceImpl implements DwsOutputService {
             reportOutput.setOrderno(data.gettE());
             reportOutput.setOrdertype(data.gettH());
             reportOutput.setOrderline(data.gettI());
-            reportOutput.setPrice(data.gettAv());//含税单价
+            reportOutput.setPrice(data.gettAq());//采购单价
             reportOutput.setCount(data.gettAp());//采购数量
             reportOutput.setUnit(data.gettT());//基本单位
             reportOutput.setInputtime(sdf.parse(data.gettB())); //采购日期
             reportOutput.setFactorycode(data.gettY()); //厂商编码
             reportOutput.setFactoryname(data.gettZ()); //厂商全称
-            reportOutput.setCreatetime(new Date());
+            reportOutput.setCreatetime(new Date()); //导入时间
 
-            reportOutput.setCostprice(data.gettAy());
-            reportOutput.setCost(data.gettAz());
-            reportOutput.setSum(data.gettAt());
+            reportOutput.setCostprice(data.gettAy());//成本单价
+            reportOutput.setCost(data.gettAz());//成本金额
+            reportOutput.setSum(data.gettAt());//销售金额
+            reportOutput.setRelated(data.gettBd()); //销售批次
             reportOutput.setOrigflag("0");
 
             reportOutputMapper.insert(reportOutput);

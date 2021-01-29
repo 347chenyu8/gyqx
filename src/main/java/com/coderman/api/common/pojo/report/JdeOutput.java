@@ -1,6 +1,7 @@
 package com.coderman.api.common.pojo.report;
 
 import com.alibaba.excel.annotation.ExcelIgnore;
+import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.annotation.format.DateTimeFormat;
 
 import javax.persistence.Id;
@@ -1597,966 +1598,1156 @@ public class JdeOutput implements Serializable {
     /**
      * 订单号
      */
+    @ExcelProperty("订单号")
     private String tA;
 
     /**
      * 订单 类型
      */
+    @ExcelProperty("订单 类型")
     private String tB;
 
     /**
      * 订单 公司
      */
+    @ExcelProperty("订单 公司")
     private String tC;
 
     /**
      * 订单 公司名称
      */
+    @ExcelProperty("订单 公司名称")
     private String tD;
 
     /**
      * 行号
      */
+    @ExcelProperty("行号")
     private String tE;
 
     /**
      * 分部 场所
      */
+    @ExcelProperty("分部 场所")
     private String tF;
 
     /**
      * 委托库
      */
+    @ExcelProperty("委托库")
     private String tG;
 
     /**
      * 购货企业编码
      */
+    @ExcelProperty("购货企业编码")
     private String tH;
 
     /**
      * 购货企业名称
      */
+    @ExcelProperty("购货企业名称")
     private String tI;
 
     /**
      * 出库类型
      */
+    @ExcelProperty("出库类型")
     private String tJ;
 
     /**
      * 出库类型描述
      */
+    @ExcelProperty("出库类型描述")
     private String tK;
 
     /**
      * 商品编码
      */
+    @ExcelProperty("商品编码")
     private String tL;
 
     /**
      * 商品名称
      */
+    @ExcelProperty("商品名称")
     private String tM;
 
     /**
      * 厂家物料编码
      */
+    @ExcelProperty("厂家物料编码")
     private String tN;
 
     /**
      * 规格/型号
      */
+    @ExcelProperty("规格/型号")
     private String tO;
 
     /**
      * 生产批号或序列号
      */
+    @ExcelProperty("生产批号或序列号")
     private String tP;
 
     /**
      * 生产批号 批次主文件
      */
+    @ExcelProperty("生产批号 批次主文件")
     private String tQ;
 
     /**
      * 灭菌批号
      */
+    @ExcelProperty("灭菌批号")
     private String tR;
 
     /**
      * 数量
      */
-
+    @ExcelProperty("数量")
     private BigDecimal tS;
 
     /**
      * 已销售 数量
      */
+    @ExcelProperty("已销售 数量")
     private BigDecimal tT;
 
     /**
      * 已还回 数量
      */
+    @ExcelProperty("已还回 数量")
     private BigDecimal tU;
 
     /**
      * 计量 单位
      */
+    @ExcelProperty("计量 单位")
     private String tV;
 
     /**
      * 计量 单位描述
      */
+    @ExcelProperty("计量 单位描述")
     private String tW;
 
     /**
      * 销售不含税 单价
      */
+    @ExcelProperty("销售不含税 单价")
     private BigDecimal tX;
 
     /**
      * 销售不含税 总价
      */
+    @ExcelProperty("销售不含税 总价")
     private BigDecimal tY;
 
     /**
      * 订单日期
      */
     @DateTimeFormat("yyyy-MM-dd")
+    @ExcelProperty("订单日期")
     private String tZ;
 
     /**
      * OA合同 协议号
      */
+    @ExcelProperty("OA合同 协议号")
     private String tAa;
 
     /**
      * OA采购合同 协议号
      */
+    @ExcelProperty("OA采购合同 协议号")
     private String tAb;
 
     /**
      * 项目代码
      */
+    @ExcelProperty("项目代码")
     private String tAc;
 
     /**
      * 项目名称
      */
+    @ExcelProperty("项目名称")
     private String tAd;
 
     /**
      * 业态
      */
+    @ExcelProperty("业态")
     private String tAe;
 
     /**
      * 业态 说明
      */
+    @ExcelProperty("业态 说明")
     private String tAf;
 
     /**
      * 业务员
      */
+    @ExcelProperty("业务员")
     private String tAg;
 
     /**
      * 业务员 姓名
      */
+    @ExcelProperty("业务员 姓名")
     private String tAh;
 
     /**
      * 业务 承揽部门
      */
+    @ExcelProperty("业务 承揽部门")
     private String tAi;
 
     /**
      * 业务承揽 部门名称
      */
+    @ExcelProperty("业务承揽 部门名称")
     private String tAj;
 
     /**
      * 发运至 地址号
      */
+    @ExcelProperty("发运至 地址号")
     private String tAk;
 
     /**
      * 发运至地址 名称
      */
+    @ExcelProperty("发运至地址 名称")
     private String tAl;
 
     /**
      * 短 项目号
      */
+    @ExcelProperty("短 项目号")
     private String tAm;
 
     /**
      * 第三项目 号
      */
+    @ExcelProperty("第三项目 号")
     private String tAn;
 
     /**
      * 库位
      */
+    @ExcelProperty("库位")
     private String tAo;
 
     /**
      * 批次 序列号
      */
+    @ExcelProperty("批次 序列号")
     private String tAp;
 
     /**
      * 单据 公司
      */
+    @ExcelProperty("单据 公司")
     private String tAq;
 
     /**
      * 原始 定单号
      */
+    @ExcelProperty("原始 定单号")
     private String tAr;
 
     /**
      * 原始定单 类型
      */
+    @ExcelProperty("原始定单 类型")
     private String tAs;
 
     /**
      * 原始 行号
      */
+    @ExcelProperty("原始 行号")
     private String tAt;
 
     /**
      * 公司 键
      */
+    @ExcelProperty("公司 键")
     private String tAu;
 
     /**
      * 相关 采购/销售单号
      */
+    @ExcelProperty("相关 采购/销售单号")
     private String tAv;
 
     /**
      * 相关定单 类型
      */
+    @ExcelProperty("相关定单 类型")
     private String tAw;
 
     /**
      * 相关 采购单/销售单行号
      */
+    @ExcelProperty("相关 采购单/销售单行号")
     private String tAx;
 
     /**
      * 实际发运 日期
      */
     @DateTimeFormat("yyyy-MM-dd")
+    @ExcelProperty("实际发运 日期")
     private String tAy;
 
     /**
      * 总帐 日期
      */
     @DateTimeFormat("yyyy-MM-dd")
+    @ExcelProperty("总帐 日期")
     private String tAz;
 
     /**
      * 上一 状态
      */
+    @ExcelProperty("上一 状态")
     private String tBa;
 
     /**
      * 上一状态 说明
      */
+    @ExcelProperty("上一状态 说明")
     private String tBb;
 
     /**
      * 下一 状态
      */
+    @ExcelProperty("下一 状态")
     private String tBc;
 
     /**
      * 下一状态 说明
      */
+    @ExcelProperty("下一状态 说明")
     private String tBd;
 
     /**
      * 销售 码 3
      */
+    @ExcelProperty("销售 码 3")
     private String tBe;
 
     /**
      * 销售 码 4
      */
+    @ExcelProperty("销售 码 4")
     private String tBf;
 
     /**
      * 销售 码 5
      */
+    @ExcelProperty("销售 码 5")
     private String tBg;
 
     /**
      * 发运 数量
      */
+    @ExcelProperty("发运 数量")
     private BigDecimal tBh;
 
     /**
      * 销售含税 单价
      */
+    @ExcelProperty("销售含税 单价")
     private BigDecimal tBi;
 
     /**
      * 销售含税 总价
      */
+    @ExcelProperty("销售含税 总价")
     private BigDecimal tBj;
 
     /**
      * 退货价格
      */
+    @ExcelProperty("退货价格")
     private BigDecimal tBk;
 
     /**
      * 退货金额
      */
+    @ExcelProperty("退货金额")
     private BigDecimal tBl;
 
     /**
      * 复核打包号
      */
+    @ExcelProperty("复核打包号")
     private String tBm;
 
     /**
      * 运单号
      */
+    @ExcelProperty("运单号")
     private String tBn;
 
     /**
      * 购货者经营许可证号
      */
+    @ExcelProperty("购货者经营许可证号")
     private String tBo;
 
     /**
      * 购货者备案凭证号
      */
+    @ExcelProperty("购货者备案凭证号")
     private String tBp;
 
     /**
      * 医疗机构执业许可证
      */
+    @ExcelProperty("医疗机构执业许可证")
     private String tBq;
 
     /**
      * JDE合同 编码
      */
+    @ExcelProperty("JDE合同 编码")
     private String tBr;
 
     /**
      * 业务发生 部门
      */
+    @ExcelProperty("业务发生 部门")
     private String tBs;
 
     /**
      * 业务发生 部门名称
      */
+    @ExcelProperty("业务发生 部门名称")
     private String tBt;
 
     /**
      * 商品 性质
      */
+    @ExcelProperty("商品 性质")
     private String tBu;
 
     /**
      * 商品性质 说明
      */
+    @ExcelProperty("商品性质 说明")
     private String tBv;
 
     /**
      * 产品 大类
      */
+    @ExcelProperty("产品 大类")
     private String tBw;
 
     /**
      * 产品大类 说明
      */
+    @ExcelProperty("产品大类 说明")
     private String tBx;
 
     /**
      * 风险 等级
      */
+    @ExcelProperty("风险 等级")
     private String tBy;
 
     /**
      * 风险等级 说明
      */
+    @ExcelProperty("风险等级 说明")
     private String tBz;
 
     /**
      * 特殊 分类
      */
+    @ExcelProperty("特殊 分类")
     private String tCa;
 
     /**
      * 特殊分类 说明
      */
+    @ExcelProperty("特殊分类 说明")
     private String tCb;
 
     /**
      * 产品 分类
      */
+    @ExcelProperty("产品 分类")
     private String tCc;
 
     /**
      * 产品分类 说明
      */
+    @ExcelProperty("产品分类 说明")
     private String tCd;
 
     /**
      * 存储条件
      */
+    @ExcelProperty("存储条件")
     private String tCe;
 
     /**
      * 存储条件 说明
      */
+    @ExcelProperty("存储条件 说明")
     private String tCf;
 
     /**
      * 生产 厂家
      */
+    @ExcelProperty("生产 厂家")
     private String tCg;
 
     /**
      * 生产厂家 名称
      */
+    @ExcelProperty("生产厂家 名称")
     private String tCh;
 
     /**
      * 生产企业许可证或备案凭证号
      */
+    @ExcelProperty("生产企业许可证或备案凭证号")
     private String tCi;
 
     /**
      * 生产日期
      */
     @DateTimeFormat("yyyy-MM-dd")
+    @ExcelProperty("生产日期")
     private String tCj;
 
     /**
      * 有效期/ 失效日期
      */
     @DateTimeFormat("yyyy-MM-dd")
+    @ExcelProperty("有效期/ 失效日期")
     private String tCk;
 
     /**
      * 灭菌 失效日期
      */
     @DateTimeFormat("yyyy-MM-dd")
+    @ExcelProperty("灭菌 失效日期")
     private String tCl;
 
     /**
      * 购货企业经营地址
      */
+    @ExcelProperty("购货企业经营地址")
     private String tCm;
 
     /**
      * 购货企业联系方式
      */
+    @ExcelProperty("购货企业联系方式")
     private String tCn;
 
     /**
      * 序列号
      */
+    @ExcelProperty("序列号")
     private String tCo;
 
     /**
      * 单位成本
      */
+    @ExcelProperty("单位成本")
     private BigDecimal tCp;
 
     /**
      * 总 成本
      */
+    @ExcelProperty("总 成本")
     private BigDecimal tCq;
 
     /**
      * 采购含税 单价
      */
+    @ExcelProperty("采购含税 单价")
     private BigDecimal tCr;
 
     /**
      * 采购含税 总价
      */
+    @ExcelProperty("采购含税 总价")
     private BigDecimal tCs;
 
     /**
      * 毛利
      */
+    @ExcelProperty("毛利")
     private BigDecimal tCt;
 
     /**
      * 毛利率
      */
+    @ExcelProperty("毛利率")
     private BigDecimal tCu;
 
     /**
      * 税额
      */
+    @ExcelProperty("税额")
     private BigDecimal tCv;
 
     /**
      * 开票申请 单号
      */
+    @ExcelProperty("开票申请 单号")
     private String tCw;
 
     /**
      * 收货地址
      */
+    @ExcelProperty("收货地址")
     private String tCx;
 
     /**
      * 地址名称
      */
+    @ExcelProperty("地址名称")
     private String tCy;
 
     /**
      * 收货联系人
      */
+    @ExcelProperty("收货联系人")
     private String tCz;
 
     /**
      * 收货联系人联系方式
      */
+    @ExcelProperty("收货联系人联系方式")
     private String tDa;
 
     /**
      * 发运方式
      */
+    @ExcelProperty("发运方式")
     private String tDb;
 
     /**
      * 销售备注
      */
+    @ExcelProperty("销售备注")
     private String tDc;
 
     /**
      * 货币码
      */
+    @ExcelProperty("货币码")
     private String tDd;
 
     /**
      * 汇率
      */
+    @ExcelProperty("汇率")
     private String tDe;
 
     /**
      * 取消 日期
      */
+    @ExcelProperty("取消 日期")
     private String tDf;
 
     /**
      * 采购员 编码
      */
+    @ExcelProperty("采购员 编码")
     private String tDg;
 
     /**
      * 采购员 姓名
      */
+    @ExcelProperty("采购员 姓名")
     private String tDh;
 
     /**
      * 计税 Y/N
      */
+    @ExcelProperty("计税 Y/N")
     private String tDi;
 
     /**
      * 税码 说明
      */
+    @ExcelProperty("税码 说明")
     private String tDj;
 
     /**
      * 税率 税区
      */
+    @ExcelProperty("税率 税区")
     private String tDk;
 
     /**
      * 供应商 编码
      */
+    @ExcelProperty("供应商 编码")
     private String tDl;
 
     /**
      * 供应商名称
      */
+    @ExcelProperty("供应商名称")
     private String tDm;
 
     /**
      * 进口/国产/港澳台
      */
+    @ExcelProperty("进口/国产/港澳台")
     private String tDn;
 
     /**
      * 进口/国产/港澳台
      */
+    @ExcelProperty("进口/国产/港澳台")
     private String tDo;
 
     /**
      * 进口/合资/国产
      */
+    @ExcelProperty("进口/合资/国产")
     private String tDp;
 
     /**
      * 进口/合资/国产
      */
+    @ExcelProperty("进口/合资/国产")
     private String tDq;
 
     /**
      * 存储条件
      */
+    @ExcelProperty("存储条件")
     private String tDr;
 
     /**
      * 注册证号或备案凭证号
      */
+    @ExcelProperty("注册证号或备案凭证号")
     private String tDs;
 
     /**
      * 国家 （地区）
      */
+    @ExcelProperty("国家 （地区）")
     private String tDt;
 
     /**
      * Ctry
      */
+    @ExcelProperty("Ctry")
     private String tDu;
 
     /**
      * 省（州）
      */
+    @ExcelProperty("省（州）")
     private String tDv;
 
     /**
      * ST
      */
+    @ExcelProperty("ST")
     private String tDw;
 
     /**
      * 客商 类别
      */
+    @ExcelProperty("客商 类别")
     private String tDx;
 
     /**
      * 客商 类别
      */
+    @ExcelProperty("客商 类别")
     private String tDy;
 
     /**
      * 单位 性质
      */
+    @ExcelProperty("单位 性质")
     private String tDz;
 
     /**
      * 单位性质
      */
+    @ExcelProperty("单位性质")
     private String tEa;
 
     /**
      * 是否生产商
      */
+    @ExcelProperty("是否生产商")
     private String tEb;
 
     /**
      * 是否经销商
      */
+    @ExcelProperty("是否经销商")
     private String tEc;
 
     /**
      * 是否进口商
      */
+    @ExcelProperty("是否进口商")
     private String tEd;
 
     /**
      * 是否医院
      */
+    @ExcelProperty("是否医院")
     private String tEe;
 
     /**
      * 医院是否公立
      */
+    @ExcelProperty("医院是否公立")
     private String tEf;
 
     /**
      * 是否个人
      */
+    @ExcelProperty("是否个人")
     private String tEg;
 
     /**
      * 是否其他
      */
+    @ExcelProperty("是否其他")
     private String tEh;
 
     /**
      * 医院大类
      */
+    @ExcelProperty("医院大类")
     private String tEi;
 
     /**
      * 医院大类说明
      */
+    @ExcelProperty("医院大类说明")
     private String tEj;
 
     /**
      * 医院小类
      */
+    @ExcelProperty("医院小类")
     private String tEk;
 
     /**
      * 医院小类说明
      */
+    @ExcelProperty(" 医院小类说明")
     private String tEl;
 
     /**
      * 上一次 打印日期
      */
+    @ExcelProperty("上一次 打印日期")
     @DateTimeFormat("yyyy-MM-dd")
     private String tEm;
 
     /**
      * 上一次 打印时间
      */
+    @ExcelProperty("上一次 打印时间")
     @DateTimeFormat("yyyy-MM-dd")
     private String tEn;
 
     /**
      * 上一次 打印人
      */
+    @ExcelProperty("上一次 打印人")
     private String tEo;
 
     /**
      * 打印次数
      */
+    @ExcelProperty("打印次数")
     private BigDecimal tEp;
 
     /**
      * 产品线
      */
+    @ExcelProperty("产品线")
     private String tEq;
 
     /**
      * 产品线 名称
      */
+    @ExcelProperty("产品线 名称")
     private String tEr;
 
     /**
      * 医疗级别
      */
+    @ExcelProperty("医疗级别")
     private String tEs;
 
     /**
      * 医疗级别1
      */
+    @ExcelProperty("医疗级别1")
     private String tEt;
 
     /**
      * 购货企业经营地址
      */
+    @ExcelProperty("购货企业经营地址")
     private String tEu;
 
     /**
      * 购货企业联系电话
      */
+    @ExcelProperty("购货企业联系电话")
     private String tEv;
 
     /**
      * 高值/普耗
      */
+    @ExcelProperty("高值/普耗")
     private String tEw;
 
     /**
      * 采购单号
      */
+    @ExcelProperty("采购单号")
     private String tEx;
 
     /**
      * 采购单类型
      */
+    @ExcelProperty("采购单类型")
     private String tEy;
 
     /**
      * 促销折扣
      */
+    @ExcelProperty("促销折扣")
     private String tEz;
 
     /**
      * 招标折扣
      */
+    @ExcelProperty("招标折扣")
     private String tFa;
 
     /**
      * 销量折扣
      */
+    @ExcelProperty("销量折扣")
     private String tFb;
 
     /**
      * 其他折扣1
      */
+    @ExcelProperty("其他折扣1")
     private String tFc;
 
     /**
      * 其他折扣2
      */
+    @ExcelProperty("其他折扣2")
     private String tFd;
 
     /**
      * 其他折扣3
      */
+    @ExcelProperty("其他折扣3")
     private String tFe;
 
     /**
      * 原价
      */
+    @ExcelProperty("原价")
     private String tFf;
 
     /**
      * 开票日期
      */
+    @ExcelProperty("开票日期")
     @DateTimeFormat("yyyy-MM-dd")
     private String tFg;
 
     /**
      * 金税发票号
      */
+    @ExcelProperty("金税发票号")
     private String tFh;
 
     /**
      * 发票金额
      */
+    @ExcelProperty("发票金额")
     private BigDecimal tFi;
 
     /**
      * Commodity Name
      */
+    @ExcelProperty("Commodity Name")
     private String tFj;
 
     /**
      * 采购项目代码
      */
+    @ExcelProperty("采购项目代码")
     private String tFk;
 
     /**
      * 采购项目名称
      */
+    @ExcelProperty("采购项目名称")
     private String tFl;
 
     /**
      * 商品分类
      */
+    @ExcelProperty("商品分类")
     private String tFm;
 
     /**
      * 备注
      */
+    @ExcelProperty("备注")
     private String tFn;
 
     /**
      * 产品追溯码
      */
+    @ExcelProperty("产品追溯码")
     private String tFo;
 
     /**
      * 批号效期码
      */
+    @ExcelProperty("批号效期码")
     private String tFp;
 
     /**
      * SPD采购单号
      */
+    @ExcelProperty("SPD采购单号")
     private String tFq;
 
     /**
      * SPD采购单行号
      */
+    @ExcelProperty("SPD采购单行号")
     private String tFr;
 
     /**
      * 是否已签收
      */
+    @ExcelProperty("是否已签收")
     private String tFs;
 
     /**
      * 签收人
      */
+    @ExcelProperty("签收人")
     private String tFt;
 
     /**
      * 签收时间
      */
+    @ExcelProperty("签收时间")
     private String tFu;
 
     /**
      * 单据公司
      */
+    @ExcelProperty("单据公司")
     private String tFv;
 
     /**
      * 单据类型
      */
+    @ExcelProperty("单据类型")
     private String tFw;
 
     /**
      * 单据号
      */
+    @ExcelProperty("单据号")
     private String tFx;
 
     /**
      * 行 类型
      */
+    @ExcelProperty("行 类型")
     private String tFy;
 
     /**
      * 总账级
      */
+    @ExcelProperty("总账级")
     private String tFz;
 
     /**
      * 制单员
      */
+    @ExcelProperty("制单员")
     private String tGa;
 
     /**
      * 制单员 名称
      */
+    @ExcelProperty("制单员 名称")
     private String tGb;
 
     /**
      * 新风险等级
      */
+    @ExcelProperty("新风险等级")
     private String tGc;
 
     /**
      * 新风险等级说明
      */
+    @ExcelProperty("新风险等级说明")
     private String tGd;
 
     /**
      * 新产品分类
      */
+    @ExcelProperty("新产品分类")
     private String tGe;
 
     /**
      * 新产品分类说明
      */
+    @ExcelProperty("新产品分类说明")
     private String tGf;
 
     /**
      * 退货原因
      */
+    @ExcelProperty("退货原因")
     private String tGg;
 
     /**
      * 退货原因说明
      */
+    @ExcelProperty("退货原因说明")
     private String tGh;
 
     /**
      * 退货原因详情描述
      */
+    @ExcelProperty("退货原因详情描述")
     private String tGi;
 
 

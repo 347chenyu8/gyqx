@@ -15,19 +15,19 @@ public class ReportOutput {
     @Id
     @GeneratedValue(generator = "JDBC")
     private Long id;
-    private String system;
-    private String goodscode;
-    private String goodsname;
-    private String goodsmodle;
-    private String suppliername;
-    private String suppliercode;
-    private String batch;
-    private String orderno;
-    private String  ordertype;
-    private String orderline;
-    private BigDecimal price;
-    private BigDecimal count;
-    private String unit;
+    private String system; //系统来源
+    private String goodscode; //商品编码
+    private String goodsname; //商品名称
+    private String goodsmodle;  //商品规格
+    private String suppliername; //供应商名称
+    private String suppliercode; //供应商编码
+    private String batch; //批次
+    private String orderno; //订单号
+    private String  ordertype;//销售订单类型
+    private String orderline; //销售订单行号
+    private BigDecimal price; //销售单价
+    private BigDecimal count; //销售数量
+    private String unit; //单位
 
     @JsonFormat(pattern = "yyyy-MM-dd", timezone = "GMT+8")
     private Date inputtime;
@@ -48,5 +48,6 @@ public class ReportOutput {
     private BigDecimal origsum;  //溯源销售总金额
     private BigDecimal origcount; //溯源销售数量
     private String origflag; //溯源标识 0 未溯源，1溯源成功 2 溯源失败
+    private String result;
 
 }

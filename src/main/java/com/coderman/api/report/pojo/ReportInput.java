@@ -21,7 +21,7 @@ public class ReportInput {
     private String goodsmodle;
     private String suppliername;
     private String suppliercode;
-    private String batch;
+    private String batch;  //批次号
     private String orderno;
     private String  ordertype;
     private String orderline;
@@ -38,5 +38,7 @@ public class ReportInput {
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private Date createtime;
-    private String related;
+    private String related; //关联入库号
+    private String remake;  //两系统采销订单号
+
 }
