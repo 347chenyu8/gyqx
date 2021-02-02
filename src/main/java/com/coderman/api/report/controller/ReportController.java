@@ -220,8 +220,8 @@ public class ReportController {
     @PostMapping("/analyseData")
     @Transactional
     public ResponseBean analyseData() throws IOException {
-        reportService.analyseData();
-        return ResponseBean.success();
+
+        return reportService.analyseData();
     }
     /**
      * 上传 JDE入库表

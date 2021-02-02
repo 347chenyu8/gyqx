@@ -1,12 +1,13 @@
 package com.coderman.api.report.service.impl;
 
+import com.coderman.api.common.bean.ResponseBean;
 import com.coderman.api.report.mapper.JdeInputStorageMapper;
 import com.coderman.api.report.mapper.ReportGlMapper;
 import com.coderman.api.report.mapper.ReportInputMapper;
 import com.coderman.api.report.mapper.ReportOutputMapper;
 import com.coderman.api.report.pojo.*;
-import com.coderman.api.report.service.ReportGlService;
 import com.coderman.api.report.service.ReportService;
+import com.coderman.api.report.vo.AnalyseResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -14,6 +15,7 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -39,16 +41,51 @@ public class ReportServiceImpl implements ReportService {
     private  static final String corp_name_zhj="海南智合健科技有限公司";
 
     @Override
-    public void analyseData() {
+    public ResponseBean analyseData() {
+        AnalyseResult analyseResult = new AnalyseResult();
+        int count = 0;//处理数量
+        int successCount = 0;//成功数量
+        int failedCount = 0;//失败数量
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+        Date beginTime;//数据最小日期
+        Date EndTime ;//数据最大日期
+        Date analyseBeginData;
+        try{
+            beginTime = sdf.parse("2099-01-01 00:00:00");
+            EndTime = sdf.parse("2000-01-01 00:00:00");
+            analyseBeginData = sdf.parse("2021-02-01 00:00:00");
+        }catch (Exception e){
+            e.printStackTrace();
+            return ResponseBean.error("系统错误，请联系管理员");
+        }
+
+        List<ReportOutput> succesData = new ArrayList<ReportOutput>();//失败数据
+        List<ReportOutput> failedData = new ArrayList<ReportOutput>();;//失败数据
+
+
         //1.关联采销数据
-        //1.1查找智合健所有销售数据 未处理的销售
+        //1.1查找所有销售数据 (未处理的、采购对象不是内部单位的、时间大于2021-02-01号的销售记录）
         Example o = new Example(ReportOutput.class);
         Example.Criteria criteria = o.createCriteria();
-        criteria.andEqualTo("system",'0');
         criteria.andEqualTo("origflag",'0');
+        List<String> insideCorpList = new ArrayList<>();
+        insideCorpList.add(corp_name_gyqx);
+        insideCorpList.add(corp_name_dws);
+        insideCorpList.add(corp_name_zhj);
+        criteria.andNotIn("suppliername",insideCorpList);
+        criteria.andGreaterThanOrEqualTo("inputtime",analyseBeginData);
         List<ReportOutput> reportOutputs = reportOutputMapper.selectByExample(o);
         //1.2逐条查找采购订单号
         for(ReportOutput item : reportOutputs ){
+            count++;//数量增加
+            if(item.getInputtime().getTime() < beginTime.getTime()){
+                beginTime = item.getInputtime();
+            }
+            if(item.getInputtime().getTime() > EndTime.getTime()){
+                EndTime = item.getInputtime();
+            }
+
             //获取销售数据
             BigDecimal count1 = item.getCount(); //销售数量
             String factoryname1 = item.getFactoryname(); //销售厂家
@@ -60,36 +97,51 @@ public class ReportServiceImpl implements ReportService {
                 if(insideCorp(buyData.getSuppliername())){
                     ReportOutput outPutByInput = getOutPutByInput(buyData);
                     if(outPutByInput == null){
+                        failedCount++;// 失败数量增加
                         item.setOrigflag("2");//失败溯源
                         item.setOrigprice(item.getCostprice()); // 溯源成本单价
                         item.setOrigcost(item.getCost()); //溯源成本
-                        item.setResult("未能关联到上级内部销售单");
+                        item.setResult("未能关联到上级"+buyData.getSuppliername()+"内部销售单");
+                        failedData.add(item);
                         break;
                     }
                     buyData = getBuyData(outPutByInput);
 
                 }else{
+                    successCount++;//成功数量增加
                     item.setOrigflag("1");//成功溯源
                     BigDecimal price = buyData.getPrice();
-                    System.out.println("chenyu"+buyData.getId());
                     if(price == null){
                         price = new BigDecimal("0");
                     }
                     BigDecimal cost = price.multiply(count1);
                     item.setOrigprice(price); // 溯源成本单价
                     item.setOrigcost(cost); //溯源成本
+                    succesData.add(item);
                     break;
                 }
             }
             if(buyData == null){
+                failedCount++;// 失败数量增加
                 item.setOrigflag("2");//失败溯源
                 item.setOrigprice(item.getCostprice()); // 溯源成本单价
                 item.setOrigcost(item.getCost()); //溯源成本
                 item.setResult("未能关联到采购订单");
+                failedData.add(item);
             }
             //更新溯源销售记录
             UpdateOutPutByID(item);
         }
+
+        analyseResult.setBeginTime(beginTime);
+        analyseResult.setEndTime(EndTime);
+        analyseResult.setCount(count);
+        analyseResult.setFailedCount(failedCount);
+        analyseResult.setSuccessCount(successCount);
+        analyseResult.setCount(count);
+        analyseResult.setSuccesData(succesData);
+        analyseResult.setFailedData(failedData);
+        return ResponseBean.success(analyseResult);
     }
 
     /**
